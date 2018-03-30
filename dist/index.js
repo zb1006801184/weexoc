@@ -351,7 +351,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     on: {
       "click": _vm.lfyClick
     }
-  }, [_vm._v("李飞燕demo")]), _c('text', {
+  }, [_vm._v("李飞燕demo-网络请求上拉刷新下拉加载")]), _c('text', {
     staticClass: ["greeting"],
     on: {
       "click": _vm.zy1Click
