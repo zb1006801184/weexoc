@@ -1,0 +1,2 @@
+dependencies: \
+  /Users/zhubiao/work/weexoc/platforms/ios/Pods/Target\ Support\ Files/Pods-WeexDemo/Pods-WeexDemo-dummy.m
