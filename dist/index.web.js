@@ -19888,7 +19888,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         return _vm.lfyClick($event)
       }
     }
-  }, [_vm._v("李飞燕demo-网络请求上拉刷新下拉加载")]), _vm._v(" "), _c('p', {
+  }, [_vm._v("李飞燕demo-网络请求")]), _vm._v(" "), _c('p', {
     staticClass: "greeting weex-el weex-text",
     attrs: {
       "weex-type": "text",

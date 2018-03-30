@@ -5,7 +5,7 @@
     <text class="greeting" @click="pushClick">click to push!</text>
     <text class="greeting" @click="pushOneCellClick">一个cell</text>
     <text class="greeting" @click="pushOneComponentClick">一个原生的cell</text>
-    <text class="greeting" @click="lfyClick">李飞燕demo-网络请求上拉刷新下拉加载</text>
+    <text class="greeting" @click="lfyClick">李飞燕demo-网络请求</text>
     <text class="greeting" @click="zy1Click">曾勇demo-text</text>
     <text class="greeting" @click="zy2Click">曾勇demo-image</text>
     <!-- <HelloWorld/> -->
