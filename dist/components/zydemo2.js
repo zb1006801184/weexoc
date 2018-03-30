@@ -62,26 +62,26 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 30);
+/******/ 	return __webpack_require__(__webpack_require__.s = 21);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 30:
+/***/ 21:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(31)
+__vue_styles__.push(__webpack_require__(22)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(32)
+__vue_exports__ = __webpack_require__(23)
 
 /* template */
-var __vue_template__ = __webpack_require__(33)
+var __vue_template__ = __webpack_require__(24)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -93,10 +93,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/zhubiao/work/weexoc/src/next.vue"
+__vue_options__.__file = "/Users/zhubiao/work/weexoc/src/components/zydemo2.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-03166e05"
+__vue_options__._scopeId = "data-v-6bfefc69"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -114,33 +114,37 @@ new Vue(module.exports)
 
 /***/ }),
 
-/***/ 31:
+/***/ 22:
 /***/ (function(module, exports) {
 
 module.exports = {
   "wrapper": {
-    "flexDirection": "column",
-    "justifyContent": "center"
+    "paddingTop": "30",
+    "paddingRight": "30",
+    "paddingBottom": "30",
+    "paddingLeft": "30",
+    "justifyContent": "space-around",
+    "alignItems": "center"
   },
-  "button": {
-    "fontSize": "60",
-    "width": "450",
+  "title": {
+    "width": "500",
     "textAlign": "center",
-    "marginTop": "30",
-    "marginLeft": "150",
-    "paddingTop": "20",
-    "paddingBottom": "20",
-    "borderWidth": "2",
+    "fontSize": "60",
+    "color": "rgb(0,180,255)"
+  },
+  "image": {
+    "width": "500",
+    "height": "280",
+    "borderColor": "#41B883",
     "borderStyle": "solid",
-    "color": "#666666",
-    "borderColor": "#DDDDDD",
-    "backgroundColor": "#F5F5F5"
+    "borderWidth": "2",
+    "backgroundColor": "#666666"
   }
 }
 
 /***/ }),
 
-/***/ 32:
+/***/ 23:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -155,33 +159,140 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-var navigator = weex.requireModule('navigator');
+
+// 提示框
 var modal = weex.requireModule('modal');
-
 exports.default = {
+
+  // 处理数据的地方
+  data: function data() {
+    return {
+      // 动态获取数据
+      message: 'stretch点击加载图片',
+      imageurl: ''
+    };
+  },
+
   methods: {
-    jump: function jump(event) {
-      navigator.pop({ animated: "true" });
+    // 给图片加的点击方法
+    loadImage: function loadImage() {
+
+      if (!this.imageurl) {
+        this.message = '图片加载完成', this.imageurl = 'https://gw.alicdn.com/tfs/TB1dZ4WowoQMeJjy0FnXXb8gFXa-950-1267.jpg';
+      }
+    },
+
+
+    // 图片加载完成调用的方法
+    onImageLoad: function onImageLoad(event) {
+      if (event.success) {
+        modal.toast({
+          message: '图片加载完成',
+          duration: 2
+        });
+      }
     }
   }
 };
 
 /***/ }),
 
-/***/ 33:
+/***/ 24:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: ["wrapper"]
-  }, [_c('text', {
-    staticClass: ["button"],
+  }, [_vm._m(0), _vm._m(1), _c('div', [_c('image', {
+    staticClass: ["image"],
+    attrs: {
+      "resize": "stretch",
+      "src": _vm.imageurl
+    },
     on: {
-      "click": _vm.jump
+      "click": _vm.loadImage,
+      "load": _vm.onImageLoad
     }
-  }, [_vm._v("点击返回")])])
-},staticRenderFns: []}
+  }), _c('text', {
+    staticClass: ["title"]
+  }, [_vm._v(_vm._s(_vm.message))])])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('image', {
+    staticClass: ["image"],
+    attrs: {
+      "resize": "cover",
+      "src": "https://gw.alicdn.com/tfs/TB1dZ4WowoQMeJjy0FnXXb8gFXa-950-1267.jpg"
+    }
+  }), _c('text', {
+    staticClass: ["title"]
+  }, [_vm._v("cover")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('image', {
+    staticClass: ["image"],
+    attrs: {
+      "resize": "contain",
+      "src": "https://gw.alicdn.com/tfs/TB1MRzvdwMPMeJjy1XdXXasrXXa-400-300.gif"
+    }
+  }), _c('text', {
+    staticClass: ["title"]
+  }, [_vm._v("contain")])])
+}]}
 module.exports.render._withStripped = true
 
 /***/ })

@@ -5,6 +5,9 @@
     <text class="greeting" @click="pushClick">click to push!</text>
     <text class="greeting" @click="pushOneCellClick">一个cell</text>
     <text class="greeting" @click="pushOneComponentClick">一个原生的cell</text>
+    <text class="greeting" @click="lfyClick">李飞燕demo</text>
+    <text class="greeting" @click="zy1Click">曾勇demo-text</text>
+    <text class="greeting" @click="zy2Click">曾勇demo-image</text>
     <!-- <HelloWorld/> -->
   </div>
 </template>
@@ -47,6 +50,15 @@ export default {
     //一个原生的cell
     pushOneComponentClick(){
       weex.requireModule("showLoading").pushCustModuleVC({"VC":"3"})
+    },
+    lfyClick(){
+      weex.requireModule("showLoading").pushCustModuleVC({"VC":"4"})
+    },
+    zy1Click(){
+      weex.requireModule("showLoading").pushCustModuleVC({"VC":"5"})
+    },
+    zy2Click(){
+      weex.requireModule("showLoading").pushCustModuleVC({"VC":"6"})
     },
     show(){
         modal.toast({

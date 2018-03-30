@@ -30,7 +30,6 @@
     
     SDWebImageManager *mgr = [SDWebImageManager sharedManager];
     
-    
     id op = [mgr downloadImageWithURL:[NSURL URLWithString:url]
                               options:SDWebImageRetryFailed
                              progress:nil

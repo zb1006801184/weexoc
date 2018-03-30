@@ -8,6 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		1CE46AB3B1B746D0D3E7FC9B /* Pods_weexios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F46B6304034A3DE48D7CDC8 /* Pods_weexios.framework */; };
+		2A08624B206E422F007E3886 /* LFYDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A08624A206E422F007E3886 /* LFYDemoViewController.m */; };
+		2A08624E206E423B007E3886 /* ZYDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A08624D206E423B007E3886 /* ZYDemoViewController.m */; };
+		2A086280206E4410007E3886 /* CellDemo.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A08626D206E4410007E3886 /* CellDemo.js */; };
+		2A086281206E4410007E3886 /* CellDemo.web.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A08626E206E4410007E3886 /* CellDemo.web.js */; };
+		2A086282206E4410007E3886 /* CellDemoComponents.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A08626F206E4410007E3886 /* CellDemoComponents.js */; };
+		2A086283206E4410007E3886 /* CellDemoComponents.web.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A086270206E4410007E3886 /* CellDemoComponents.web.js */; };
+		2A086284206E4410007E3886 /* CustModule.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A086271206E4410007E3886 /* CustModule.js */; };
+		2A086285206E4410007E3886 /* CustModule.web.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A086272206E4410007E3886 /* CustModule.web.js */; };
+		2A086286206E4410007E3886 /* HelloWorld.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A086273206E4410007E3886 /* HelloWorld.js */; };
+		2A086287206E4410007E3886 /* HelloWorld.web.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A086274206E4410007E3886 /* HelloWorld.web.js */; };
+		2A086288206E4410007E3886 /* lfydemo.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A086275206E4410007E3886 /* lfydemo.js */; };
+		2A086289206E4410007E3886 /* lfydemo.web.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A086276206E4410007E3886 /* lfydemo.web.js */; };
+		2A08628A206E4410007E3886 /* zydemo1.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A086277206E4410007E3886 /* zydemo1.js */; };
+		2A08628B206E4410007E3886 /* zydemo1.web.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A086278206E4410007E3886 /* zydemo1.web.js */; };
+		2A08628C206E4410007E3886 /* zydemo2.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A086279206E4410007E3886 /* zydemo2.js */; };
+		2A08628D206E4410007E3886 /* zydemo2.web.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A08627A206E4410007E3886 /* zydemo2.web.js */; };
+		2A08628E206E4410007E3886 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A08627B206E4410007E3886 /* index.js */; };
+		2A08628F206E4410007E3886 /* index.web.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A08627C206E4410007E3886 /* index.web.js */; };
+		2A086290206E4410007E3886 /* next.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A08627D206E4410007E3886 /* next.js */; };
+		2A086291206E4410007E3886 /* next.web.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A08627E206E4410007E3886 /* next.web.js */; };
+		2A086292206E4410007E3886 /* vendor.web.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A08627F206E4410007E3886 /* vendor.web.js */; };
+		2A086295206E44CC007E3886 /* ZYDemoImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A086294206E44CC007E3886 /* ZYDemoImageViewController.m */; };
 		2A18C355206B93B9000B9714 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A18C354206B93B9000B9714 /* BaseViewController.m */; };
 		2A18C358206B9450000B9714 /* WXCustMoudelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A18C357206B9450000B9714 /* WXCustMoudelViewController.m */; };
 		2A18C3D9206CB669000B9714 /* CellDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A18C3D8206CB669000B9714 /* CellDemoViewController.m */; };
@@ -15,19 +37,6 @@
 		2A18C40B206CD334000B9714 /* CellDemoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A18C409206CD334000B9714 /* CellDemoTableViewCell.xib */; };
 		2A18C40E206CD3D6000B9714 /* CellDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A18C40D206CD3D6000B9714 /* CellDemo.m */; };
 		2A33642E206DD91D008B2F2D /* WXLoaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A33642D206DD91D008B2F2D /* WXLoaderOperation.m */; };
-		2A8F9A82206CDC6C00BD9828 /* CellDemo.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F9A75206CDC6C00BD9828 /* CellDemo.js */; };
-		2A8F9A83206CDC6C00BD9828 /* CellDemo.web.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F9A76206CDC6C00BD9828 /* CellDemo.web.js */; };
-		2A8F9A84206CDC6C00BD9828 /* CellDemoComponents.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F9A77206CDC6C00BD9828 /* CellDemoComponents.js */; };
-		2A8F9A85206CDC6C00BD9828 /* CellDemoComponents.web.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F9A78206CDC6C00BD9828 /* CellDemoComponents.web.js */; };
-		2A8F9A86206CDC6C00BD9828 /* CustModule.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F9A79206CDC6C00BD9828 /* CustModule.js */; };
-		2A8F9A87206CDC6C00BD9828 /* CustModule.web.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F9A7A206CDC6C00BD9828 /* CustModule.web.js */; };
-		2A8F9A88206CDC6C00BD9828 /* HelloWorld.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F9A7B206CDC6C00BD9828 /* HelloWorld.js */; };
-		2A8F9A89206CDC6C00BD9828 /* HelloWorld.web.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F9A7C206CDC6C00BD9828 /* HelloWorld.web.js */; };
-		2A8F9A8A206CDC6C00BD9828 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F9A7D206CDC6C00BD9828 /* index.js */; };
-		2A8F9A8B206CDC6C00BD9828 /* index.web.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F9A7E206CDC6C00BD9828 /* index.web.js */; };
-		2A8F9A8C206CDC6C00BD9828 /* next.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F9A7F206CDC6C00BD9828 /* next.js */; };
-		2A8F9A8D206CDC6C00BD9828 /* next.web.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F9A80206CDC6C00BD9828 /* next.web.js */; };
-		2A8F9A8E206CDC6C00BD9828 /* vendor.web.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F9A81206CDC6C00BD9828 /* vendor.web.js */; };
 		2A8F9A91206CDCD600BD9828 /* ComponentCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F9A90206CDCD600BD9828 /* ComponentCellViewController.m */; };
 		2AE2A003206B82A50042FDA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2A002206B82A50042FDA4 /* AppDelegate.m */; };
 		2AE2A006206B82A50042FDA4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2A005206B82A50042FDA4 /* ViewController.m */; };
@@ -60,6 +69,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A086249206E422F007E3886 /* LFYDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFYDemoViewController.h; sourceTree = "<group>"; };
+		2A08624A206E422F007E3886 /* LFYDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFYDemoViewController.m; sourceTree = "<group>"; };
+		2A08624C206E423B007E3886 /* ZYDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYDemoViewController.h; sourceTree = "<group>"; };
+		2A08624D206E423B007E3886 /* ZYDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYDemoViewController.m; sourceTree = "<group>"; };
+		2A08626D206E4410007E3886 /* CellDemo.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = CellDemo.js; sourceTree = "<group>"; };
+		2A08626E206E4410007E3886 /* CellDemo.web.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = CellDemo.web.js; sourceTree = "<group>"; };
+		2A08626F206E4410007E3886 /* CellDemoComponents.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = CellDemoComponents.js; sourceTree = "<group>"; };
+		2A086270206E4410007E3886 /* CellDemoComponents.web.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = CellDemoComponents.web.js; sourceTree = "<group>"; };
+		2A086271206E4410007E3886 /* CustModule.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = CustModule.js; sourceTree = "<group>"; };
+		2A086272206E4410007E3886 /* CustModule.web.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = CustModule.web.js; sourceTree = "<group>"; };
+		2A086273206E4410007E3886 /* HelloWorld.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = HelloWorld.js; sourceTree = "<group>"; };
+		2A086274206E4410007E3886 /* HelloWorld.web.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = HelloWorld.web.js; sourceTree = "<group>"; };
+		2A086275206E4410007E3886 /* lfydemo.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = lfydemo.js; sourceTree = "<group>"; };
+		2A086276206E4410007E3886 /* lfydemo.web.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = lfydemo.web.js; sourceTree = "<group>"; };
+		2A086277206E4410007E3886 /* zydemo1.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = zydemo1.js; sourceTree = "<group>"; };
+		2A086278206E4410007E3886 /* zydemo1.web.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = zydemo1.web.js; sourceTree = "<group>"; };
+		2A086279206E4410007E3886 /* zydemo2.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = zydemo2.js; sourceTree = "<group>"; };
+		2A08627A206E4410007E3886 /* zydemo2.web.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = zydemo2.web.js; sourceTree = "<group>"; };
+		2A08627B206E4410007E3886 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
+		2A08627C206E4410007E3886 /* index.web.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.web.js; sourceTree = "<group>"; };
+		2A08627D206E4410007E3886 /* next.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = next.js; sourceTree = "<group>"; };
+		2A08627E206E4410007E3886 /* next.web.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = next.web.js; sourceTree = "<group>"; };
+		2A08627F206E4410007E3886 /* vendor.web.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = vendor.web.js; sourceTree = "<group>"; };
+		2A086293206E44CC007E3886 /* ZYDemoImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYDemoImageViewController.h; sourceTree = "<group>"; };
+		2A086294206E44CC007E3886 /* ZYDemoImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYDemoImageViewController.m; sourceTree = "<group>"; };
 		2A18C353206B93B9000B9714 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		2A18C354206B93B9000B9714 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		2A18C356206B9450000B9714 /* WXCustMoudelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXCustMoudelViewController.h; sourceTree = "<group>"; };
@@ -73,19 +107,6 @@
 		2A18C40D206CD3D6000B9714 /* CellDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellDemo.m; sourceTree = "<group>"; };
 		2A33642C206DD91D008B2F2D /* WXLoaderOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXLoaderOperation.h; sourceTree = "<group>"; };
 		2A33642D206DD91D008B2F2D /* WXLoaderOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXLoaderOperation.m; sourceTree = "<group>"; };
-		2A8F9A75206CDC6C00BD9828 /* CellDemo.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = CellDemo.js; sourceTree = "<group>"; };
-		2A8F9A76206CDC6C00BD9828 /* CellDemo.web.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = CellDemo.web.js; sourceTree = "<group>"; };
-		2A8F9A77206CDC6C00BD9828 /* CellDemoComponents.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = CellDemoComponents.js; sourceTree = "<group>"; };
-		2A8F9A78206CDC6C00BD9828 /* CellDemoComponents.web.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = CellDemoComponents.web.js; sourceTree = "<group>"; };
-		2A8F9A79206CDC6C00BD9828 /* CustModule.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = CustModule.js; sourceTree = "<group>"; };
-		2A8F9A7A206CDC6C00BD9828 /* CustModule.web.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = CustModule.web.js; sourceTree = "<group>"; };
-		2A8F9A7B206CDC6C00BD9828 /* HelloWorld.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = HelloWorld.js; sourceTree = "<group>"; };
-		2A8F9A7C206CDC6C00BD9828 /* HelloWorld.web.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = HelloWorld.web.js; sourceTree = "<group>"; };
-		2A8F9A7D206CDC6C00BD9828 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
-		2A8F9A7E206CDC6C00BD9828 /* index.web.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.web.js; sourceTree = "<group>"; };
-		2A8F9A7F206CDC6C00BD9828 /* next.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = next.js; sourceTree = "<group>"; };
-		2A8F9A80206CDC6C00BD9828 /* next.web.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = next.web.js; sourceTree = "<group>"; };
-		2A8F9A81206CDC6C00BD9828 /* vendor.web.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = vendor.web.js; sourceTree = "<group>"; };
 		2A8F9A8F206CDCD600BD9828 /* ComponentCellViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComponentCellViewController.h; sourceTree = "<group>"; };
 		2A8F9A90206CDCD600BD9828 /* ComponentCellViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComponentCellViewController.m; sourceTree = "<group>"; };
 		2AE29FFE206B82A50042FDA4 /* weexios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weexios.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +162,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A086248206E4217007E3886 /* ListContentDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2A086249206E422F007E3886 /* LFYDemoViewController.h */,
+				2A08624A206E422F007E3886 /* LFYDemoViewController.m */,
+				2A08624C206E423B007E3886 /* ZYDemoViewController.h */,
+				2A08624D206E423B007E3886 /* ZYDemoViewController.m */,
+				2A086293206E44CC007E3886 /* ZYDemoImageViewController.h */,
+				2A086294206E44CC007E3886 /* ZYDemoImageViewController.m */,
+			);
+			path = ListContentDetail;
+			sourceTree = "<group>";
+		};
+		2A08626B206E4410007E3886 /* dist */ = {
+			isa = PBXGroup;
+			children = (
+				2A08626C206E4410007E3886 /* components */,
+				2A08627B206E4410007E3886 /* index.js */,
+				2A08627C206E4410007E3886 /* index.web.js */,
+				2A08627D206E4410007E3886 /* next.js */,
+				2A08627E206E4410007E3886 /* next.web.js */,
+				2A08627F206E4410007E3886 /* vendor.web.js */,
+			);
+			name = dist;
+			path = ../../dist;
+			sourceTree = "<group>";
+		};
+		2A08626C206E4410007E3886 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				2A08626D206E4410007E3886 /* CellDemo.js */,
+				2A08626E206E4410007E3886 /* CellDemo.web.js */,
+				2A08626F206E4410007E3886 /* CellDemoComponents.js */,
+				2A086270206E4410007E3886 /* CellDemoComponents.web.js */,
+				2A086271206E4410007E3886 /* CustModule.js */,
+				2A086272206E4410007E3886 /* CustModule.web.js */,
+				2A086273206E4410007E3886 /* HelloWorld.js */,
+				2A086274206E4410007E3886 /* HelloWorld.web.js */,
+				2A086275206E4410007E3886 /* lfydemo.js */,
+				2A086276206E4410007E3886 /* lfydemo.web.js */,
+				2A086277206E4410007E3886 /* zydemo1.js */,
+				2A086278206E4410007E3886 /* zydemo1.web.js */,
+				2A086279206E4410007E3886 /* zydemo2.js */,
+				2A08627A206E4410007E3886 /* zydemo2.web.js */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		2A18C406206CD31B000B9714 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,35 +220,6 @@
 				2A18C40D206CD3D6000B9714 /* CellDemo.m */,
 			);
 			path = Demo;
-			sourceTree = "<group>";
-		};
-		2A8F9A73206CDC6C00BD9828 /* dist */ = {
-			isa = PBXGroup;
-			children = (
-				2A8F9A74206CDC6C00BD9828 /* components */,
-				2A8F9A7D206CDC6C00BD9828 /* index.js */,
-				2A8F9A7E206CDC6C00BD9828 /* index.web.js */,
-				2A8F9A7F206CDC6C00BD9828 /* next.js */,
-				2A8F9A80206CDC6C00BD9828 /* next.web.js */,
-				2A8F9A81206CDC6C00BD9828 /* vendor.web.js */,
-			);
-			name = dist;
-			path = ../../dist;
-			sourceTree = "<group>";
-		};
-		2A8F9A74206CDC6C00BD9828 /* components */ = {
-			isa = PBXGroup;
-			children = (
-				2A8F9A75206CDC6C00BD9828 /* CellDemo.js */,
-				2A8F9A76206CDC6C00BD9828 /* CellDemo.web.js */,
-				2A8F9A77206CDC6C00BD9828 /* CellDemoComponents.js */,
-				2A8F9A78206CDC6C00BD9828 /* CellDemoComponents.web.js */,
-				2A8F9A79206CDC6C00BD9828 /* CustModule.js */,
-				2A8F9A7A206CDC6C00BD9828 /* CustModule.web.js */,
-				2A8F9A7B206CDC6C00BD9828 /* HelloWorld.js */,
-				2A8F9A7C206CDC6C00BD9828 /* HelloWorld.web.js */,
-			);
-			path = components;
 			sourceTree = "<group>";
 		};
 		2AE29FF5206B82A50042FDA4 = {
@@ -207,7 +247,8 @@
 		2AE2A000206B82A50042FDA4 /* weexios */ = {
 			isa = PBXGroup;
 			children = (
-				2A8F9A73206CDC6C00BD9828 /* dist */,
+				2A08626B206E4410007E3886 /* dist */,
+				2A086248206E4217007E3886 /* ListContentDetail */,
 				2A18C406206CD31B000B9714 /* Demo */,
 				2AE2A036206B85E60042FDA4 /* weex */,
 				2AE2A001206B82A50042FDA4 /* AppDelegate.h */,
@@ -390,23 +431,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A8F9A89206CDC6C00BD9828 /* HelloWorld.web.js in Resources */,
-				2A8F9A8D206CDC6C00BD9828 /* next.web.js in Resources */,
+				2A086287206E4410007E3886 /* HelloWorld.web.js in Resources */,
+				2A086291206E4410007E3886 /* next.web.js in Resources */,
 				2AE2A00E206B82A50042FDA4 /* LaunchScreen.storyboard in Resources */,
+				2A086292206E4410007E3886 /* vendor.web.js in Resources */,
 				2AE2A00B206B82A50042FDA4 /* Assets.xcassets in Resources */,
-				2A8F9A8E206CDC6C00BD9828 /* vendor.web.js in Resources */,
+				2A086290206E4410007E3886 /* next.js in Resources */,
+				2A086288206E4410007E3886 /* lfydemo.js in Resources */,
 				2A18C40B206CD334000B9714 /* CellDemoTableViewCell.xib in Resources */,
-				2A8F9A85206CDC6C00BD9828 /* CellDemoComponents.web.js in Resources */,
-				2A8F9A83206CDC6C00BD9828 /* CellDemo.web.js in Resources */,
-				2A8F9A88206CDC6C00BD9828 /* HelloWorld.js in Resources */,
-				2A8F9A82206CDC6C00BD9828 /* CellDemo.js in Resources */,
+				2A086283206E4410007E3886 /* CellDemoComponents.web.js in Resources */,
+				2A086281206E4410007E3886 /* CellDemo.web.js in Resources */,
+				2A08628F206E4410007E3886 /* index.web.js in Resources */,
+				2A08628D206E4410007E3886 /* zydemo2.web.js in Resources */,
+				2A086289206E4410007E3886 /* lfydemo.web.js in Resources */,
+				2A086286206E4410007E3886 /* HelloWorld.js in Resources */,
+				2A086280206E4410007E3886 /* CellDemo.js in Resources */,
+				2A08628E206E4410007E3886 /* index.js in Resources */,
+				2A08628A206E4410007E3886 /* zydemo1.js in Resources */,
 				2AE2A009206B82A50042FDA4 /* Main.storyboard in Resources */,
-				2A8F9A8C206CDC6C00BD9828 /* next.js in Resources */,
-				2A8F9A86206CDC6C00BD9828 /* CustModule.js in Resources */,
-				2A8F9A84206CDC6C00BD9828 /* CellDemoComponents.js in Resources */,
-				2A8F9A8B206CDC6C00BD9828 /* index.web.js in Resources */,
-				2A8F9A87206CDC6C00BD9828 /* CustModule.web.js in Resources */,
-				2A8F9A8A206CDC6C00BD9828 /* index.js in Resources */,
+				2A086284206E4410007E3886 /* CustModule.js in Resources */,
+				2A08628C206E4410007E3886 /* zydemo2.js in Resources */,
+				2A086282206E4410007E3886 /* CellDemoComponents.js in Resources */,
+				2A08628B206E4410007E3886 /* zydemo1.web.js in Resources */,
+				2A086285206E4410007E3886 /* CustModule.web.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,11 +538,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A086295206E44CC007E3886 /* ZYDemoImageViewController.m in Sources */,
 				2AE2A035206B85240042FDA4 /* WeexMainViewController.m in Sources */,
 				2AE2A03B206B85E60042FDA4 /* imageHelper.m in Sources */,
 				2A18C40E206CD3D6000B9714 /* CellDemo.m in Sources */,
 				2A18C358206B9450000B9714 /* WXCustMoudelViewController.m in Sources */,
 				2AE2A03C206B85E60042FDA4 /* showLoadingView.m in Sources */,
+				2A08624E206E423B007E3886 /* ZYDemoViewController.m in Sources */,
+				2A08624B206E422F007E3886 /* LFYDemoViewController.m in Sources */,
 				2A18C40A206CD334000B9714 /* CellDemoTableViewCell.m in Sources */,
 				2AE2A006206B82A50042FDA4 /* ViewController.m in Sources */,
 				2AE2A011206B82A50042FDA4 /* main.m in Sources */,

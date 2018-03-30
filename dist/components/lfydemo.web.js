@@ -62,7 +62,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 47);
+/******/ 	return __webpack_require__(__webpack_require__.s = 29);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -19484,99 +19484,9 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var Component = __webpack_require__(2)(
-  /* script */
-  __webpack_require__(11),
-  /* template */
-  __webpack_require__(12),
-  /* styles */
-  null,
-  /* scopeId */
-  null,
-  /* moduleIdentifier (server only) */
-  null
-)
-Component.options.__file = "/Users/zhubiao/work/weexoc/src/components/HelloWorld.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] HelloWorld.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-614a0b7c", Component.options)
-  } else {
-    hotAPI.reload("data-v-614a0b7c", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-//
-//
-//
-//
-//
-
-var navigator = weex.requireModule('navigator');
-exports.default = {
-    methods: {
-        toBack: function toBack() {
-            navigator.pop({ animated: "true" });
-        }
-    }
-};
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('p', {
-    staticClass: " weex-el weex-text",
-    attrs: {
-      "weex-type": "text",
-      "data-evt-click": ""
-    },
-    on: {
-      "click": _vm.$stopOuterA,
-      "weex$tap": function($event) {
-        $event.stopPropagation();
-        return _vm.toBack($event)
-      }
-    }
-  }, [_vm._v("1234555")])
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-614a0b7c", module.exports)
-  }
-}
-
-/***/ }),
+/* 10 */,
+/* 11 */,
+/* 12 */,
 /* 13 */,
 /* 14 */,
 /* 15 */,
@@ -19593,25 +19503,7 @@ if (false) {
 /* 26 */,
 /* 27 */,
 /* 28 */,
-/* 29 */,
-/* 30 */,
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */,
-/* 35 */,
-/* 36 */,
-/* 37 */,
-/* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */,
-/* 42 */,
-/* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19629,33 +19521,33 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 _weexVueRender2.default.init(_vue2.default);
 
-var App = __webpack_require__(48);
+var App = __webpack_require__(30);
 new _vue2.default(_vue2.default.util.extend({ el: '#root' }, App));
 
 /***/ }),
-/* 48 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(49)
+  __webpack_require__(31)
 }
 var Component = __webpack_require__(2)(
   /* script */
-  __webpack_require__(51),
+  __webpack_require__(33),
   /* template */
-  __webpack_require__(52),
+  __webpack_require__(34),
   /* styles */
   injectStyle,
   /* scopeId */
-  "data-v-cfd94c0a",
+  "data-v-4ff17660",
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/zhubiao/work/weexoc/src/index.vue"
+Component.options.__file = "/Users/zhubiao/work/weexoc/src/components/lfydemo.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] index.vue: functional components are not supported with templates, they should use render functions.")}
+if (Component.options.functional) {console.error("[vue-loader] lfydemo.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -19664,9 +19556,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-cfd94c0a", Component.options)
+    hotAPI.createRecord("data-v-4ff17660", Component.options)
   } else {
-    hotAPI.reload("data-v-cfd94c0a", Component.options)
+    hotAPI.reload("data-v-4ff17660", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -19677,23 +19569,23 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 49 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(50);
+var content = __webpack_require__(32);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(8)("414c2beb", content, false, {});
+var update = __webpack_require__(8)("af18a1f2", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-cfd94c0a\",\"scoped\":true,\"hasInlineConfig\":true}!../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-cfd94c0a\",\"scoped\":true,\"hasInlineConfig\":true}!../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4ff17660\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./lfydemo.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4ff17660\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./lfydemo.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -19703,7 +19595,7 @@ if(false) {
 }
 
 /***/ }),
-/* 50 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(7)(false);
@@ -19711,216 +19603,330 @@ exports = module.exports = __webpack_require__(7)(false);
 
 
 // module
-exports.push([module.i, "\n.wrapper[data-v-cfd94c0a] {\n  /* justify-content: center; */\n  align-items: center;\n}\n.logo[data-v-cfd94c0a] {\n  width: 5.65333rem;\n  height: 2.66667rem;\n  border-radius: 0.26667rem;\n  background-color: steelblue;\n}\n.greeting[data-v-cfd94c0a] {\n  text-align: center;\n  margin-top: 0.13333rem;\n  font-size: 0.66667rem;\n}\n.message[data-v-cfd94c0a] {\n  margin: 0.4rem;\n  font-size: 0.42667rem;\n  color: #727272;\n}\n", ""]);
+exports.push([module.i, "\n.list[data-v-4ff17660] {\n\tbackground-color: #F5F5F5;\n}\n.floor[data-v-4ff17660] {\n\tmargin-bottom: 0.02667rem;\n\tbackground-color: #FFFFFF;\n}\n/*头部分div*/\n.section-wrap[data-v-4ff17660] {\n\t/*background-color: red;*/\n\tflex-direction: row;\n\tjustify-content: space-between;\n\t/*align-items: stretch;*/\n}\n/*头像,昵称*/\n.headeimage-nickname-wrap[data-v-4ff17660] {\n\t/*background-color: green;*/\n\tflex-direction: row;\n\tjustify-content: flex-start;\n}\n.headimage[data-v-4ff17660] {\n\tmargin-top: 0.26667rem;\n\tmargin-left: 0.4rem;\n\twidth: 0.93333rem;\n\theight: 0.93333rem;\n\tborder-radius: 0.46667rem;\n}\n.nicknamewrap[data-v-4ff17660] {\n\t/*background-color: orange;*/\n\tmargin-left: 0.26667rem;\n\twidth: 2.66667rem;\n}\n.nickname[data-v-4ff17660] {\n\tfont-size: 0.37333rem;\n\ttext-align: left;\n\tpadding-top: 0.33333rem;\n\tcolor: #B98080;\n\t/*background-color: blue;*/\n\tlines: 1;\n\tfont-weight: bold;\n\toverflow: hidden;\n\ttext-overflow: ellipsis;\n\t-webkit-line-clamp: 1;\n}\n.time[data-v-4ff17660] {\n\tcolor: #999999;\n\tlines: 1;\n\tfont-size: 0.26667rem;\n\tmargin-top: 0.02667rem;\n\toverflow: hidden;\n\ttext-overflow: ellipsis;\n\t-webkit-line-clamp: 1;\n}\n/*点赞,举报,采纳*/\n.actionbtn-wrap[data-v-4ff17660] {\n\t/*background-color: orange;*/\n\tflex-direction: row;\n\tmargin-right: 0.4rem;\n\tjustify-content: space-between;\n\twidth: 3.52rem;\n\talign-items: center;\n}\n.actiontext[data-v-4ff17660] {\n\tcolor: #AAAAAA;\n\tfont-size: 0.32rem;\n\t/*text-align:center;*/\n\t/*background-color: purple;*/\n}\n.desc[data-v-4ff17660] {\n\tlines: 0;\n\tcolor: #999999;\n\tfont-size: 0.4rem;\n\tmargin-left: 1.6rem;\n\tmargin-right: 0.45333rem;\n\tmargin-top: 0.30667rem;\n\toverflow: hidden;\n\ttext-overflow: ellipsis;\n\t-webkit-line-clamp: 0;\n}\n.comment[data-v-4ff17660] {\n\tcolor: #BBBBBB;\n\tfont-size: 0.32rem;\n\tpadding-right: 0.66667rem;\n\tmargin-top: 0.29333rem;\n\tmargin-left: 1.6rem;\n\tmargin-bottom: 0.33333rem;\n}\n/*加载更多*/\n.loadingcom[data-v-4ff17660] {\n\twidth: 10rem;\n\tdisplay: -ms-flex;\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\talign-items: center;\n}\n.loadingtext[data-v-4ff17660] {\n\tcolor: #888888;\n\tfont-size: 0.32rem;\n\ttext-align: center;\n\t/*background-color: red;*/\n}\n.indicator[data-v-4ff17660] {\n\tmargin-top: 0.21333rem;\n\theight: 0.53333rem;\n\twidth: 0.53333rem;\n\tcolor: #888888;\n\tbackground-color: blue;\n}\n/*刷新*/\n.refreshcom[data-v-4ff17660]{\n\twidth: 10rem;\n\tdisplay: -ms-flex;\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\talign-items: center;\n}\n.refreshText[data-v-4ff17660]{\n\tcolor: #888888;\n\tfont-size: 0.32rem;\n\ttext-align: center;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 51 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-var _HelloWorld = __webpack_require__(10);
-
-var _HelloWorld2 = _interopRequireDefault(_HelloWorld);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var modal = weex.requireModule('modal'); //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-var navigator = weex.requireModule('navigator');
-var globalEvent = weex.requireModule('globalEvent');
-globalEvent.addEventListener("callJS", function (e) {
-  console.log('JS回调了 参数：' + e);
-});
+var stream = weex.requireModule('stream');
+var modal = weex.requireModule('modal');
+var POST_URL = 'http://www.jspang.com/DemoApi/newsApi.php';
 
 exports.default = {
-  name: 'App',
-  components: {
-    HelloWorld: _HelloWorld2.default
-  },
-  data: function data() {
-    return {
-      logo: 'assets:moren2'
-    };
-  },
+	data: function data() {
+		return {
+			//页面渲染的数据源
+			lists: [],
+			isLoading: false,
+			isShowRefresh: false
+		};
+	},
 
+	//生命周期方法
+	created: function created() {
+		var _this = this;
 
-  methods: {
-    textClick: function textClick() {
-      weex.requireModule("showLoading").pushCustModuleVC({ "VC": "1" });
-    },
+		//			var me = this;
+		//			//请求数据
+		//			stream.fetch({
+		//				method: 'POST',
+		//				url: POST_URL,
+		//				type: 'json',
+		//				// body:'uuid=b2c19b4a288147c6824b9f460cb626bf&phone=15169559644&rows=5&mark=1&source=0&page=1'
+		//			}, function(ret) {
+		//				if(!ret.ok) {
+		//					// me.postResult = "request failed";
+		//				} else {
+		//					// console.log('get:'+JSON.stringify(ret));
+		//					// me.postResult = JSON.stringify(ret.data);
+		//					me.lists = ret.data;
+		//				}
+		//			}, function(response) {
+		//				console.log('get in progress:' + response.length);
+		//				me.postResult = "bytes received:" + response.length;
+		//			});
+		modal.toast({ message: '正在创建数据', duration: 0.5 });
+		this.reloadData(POST_URL, function (res) {
+			_this.lists = res.data;
+		});
+	},
+	methods: {
+		//点赞
+		prase: function prase(e) {
+			modal.toast({
+				message: '点赞成功',
+				duration: 1
+			});
+		},
+		//举报
+		report: function report(e) {
 
-    //push
-    pushClick: function pushClick() {
-      navigator.push({
-        url: 'http://192.168.10.229:8081/dist/next.js',
-        animated: 'true'
-      });
-    },
+			modal.confirm({
+				message: '确定要举报吗?',
+				okTitle: '确定',
+				cancelTitle: '取消',
+				duration: 1
+			}, function (value) {
+				console.log('返回值:', value);
+			});
+		}, //采纳
+		aopt: function aopt(e) {
+			modal.toast({
+				message: '采纳成功',
+				duration: 1
+			});
+		},
 
-    //一个cell
-    pushOneCellClick: function pushOneCellClick() {
-      weex.requireModule("showLoading").pushCustModuleVC({ "VC": "2" });
-    },
+		//加载数据
+		reloadData: function reloadData(url, callback) {
+			return stream.fetch({
+				method: 'POST',
+				url: url,
+				type: 'json'
+			}, callback);
+		},
 
-    //一个原生的cell
-    pushOneComponentClick: function pushOneComponentClick() {
-      weex.requireModule("showLoading").pushCustModuleVC({ "VC": "3" });
-    },
-    lfyClick: function lfyClick() {
-      weex.requireModule("showLoading").pushCustModuleVC({ "VC": "4" });
-    },
-    zy1Click: function zy1Click() {
-      weex.requireModule("showLoading").pushCustModuleVC({ "VC": "5" });
-    },
-    zy2Click: function zy2Click() {
-      weex.requireModule("showLoading").pushCustModuleVC({ "VC": "6" });
-    },
-    show: function show() {
-      modal.toast({
-        message: '展示展示1',
-        duration: 2
-      });
-    }
-  }
+		//加载更多数据
+		loadmore: function loadmore(enent) {
+			var _this2 = this;
+
+			this.isLoading = true;
+			modal.toast({
+				message: 'loading',
+				duration: 1
+			});
+			this.reloadData(POST_URL, function (restult) {
+				_this2.lists = _this2.lists.concat(restult.data);
+				setTimeout(function () {
+					_this2.isLoading = false;
+				}, 2000);
+			});
+		},
+
+		//刷新数据
+		refreshData: function refreshData(e) {
+			var _this3 = this;
+
+			this.isShowRefresh = true;
+			modal.toast({
+				message: 'refresh',
+				duration: 1
+			});
+			this.reloadData(POST_URL, function (res) {
+				_this3.lists = res.data;
+				setTimeout(function () {
+					_this3.isShowRefresh = false;
+				}, 2000);
+			});
+		}
+	}
 };
 
 /***/ }),
-/* 52 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "wrapper weex-ct weex-div",
+  return _c('list', {
+    staticClass: "list",
+    attrs: {}
+  }, [_c('refresh', {
+    staticClass: "refreshcom",
     attrs: {
-      "weex-type": "div"
-    }
-  }, [_c('figure', {
-    staticClass: "logo weex-el weex-image",
-    attrs: {
-      "src": _vm.logo,
-      "data-img-src": _vm.logo,
-      "weex-type": "image"
-    }
-  }), _vm._v(" "), _c('p', {
-    staticClass: "greeting weex-el weex-text",
-    attrs: {
-      "weex-type": "text",
-      "data-evt-click": ""
+      "display": _vm.isShowRefresh ? 'show' : 'hide',
+      "data-evt-refresh": ""
     },
-    on: {
-      "click": _vm.$stopOuterA,
-      "weex$tap": function($event) {
+    nativeOn: {
+      "refresh": function($event) {
         $event.stopPropagation();
-        return _vm.textClick($event)
+        return _vm.refreshData($event)
       }
     }
-  }, [_vm._v("自定义的module")]), _vm._v(" "), _c('p', {
-    staticClass: "greeting weex-el weex-text",
+  }, [_c('p', {
+    staticClass: "refreshText weex-el weex-text",
     attrs: {
-      "weex-type": "text",
-      "data-evt-click": ""
+      "weex-type": "text"
+    }
+  }, [_vm._v("正在刷新")]), _vm._v(" "), _c('loading-indicator', {
+    staticClass: "indicator",
+    attrs: {}
+  })], 1), _vm._v(" "), _vm._l((_vm.lists), function(item, i) {
+    return _c('section', {
+      key: i,
+      staticClass: " weex-ct weex-cell",
+      attrs: {
+        "weex-type": "cell"
+      }
+    }, [_c('div', {
+      staticClass: "floor weex-ct weex-div",
+      attrs: {
+        "weex-type": "div"
+      }
+    }, [_c('div', {
+      staticClass: "section-wrap weex-ct weex-div",
+      attrs: {
+        "weex-type": "div"
+      }
+    }, [_c('div', {
+      staticClass: "headeimage-nickname-wrap weex-ct weex-div",
+      attrs: {
+        "weex-type": "div"
+      }
+    }, [_c('figure', {
+      staticClass: "headimage weex-el weex-image",
+      attrs: {
+        "src": "https://gw.alicdn.com/imgextra/i4/706778912/TB2hvwSXBvBIuJjy1zeXXbGBpXa_!!706778912-0-beehive-scenes.jpg_250x250q90s200.jpg",
+        "data-img-src": "https://gw.alicdn.com/imgextra/i4/706778912/TB2hvwSXBvBIuJjy1zeXXbGBpXa_!!706778912-0-beehive-scenes.jpg_250x250q90s200.jpg",
+        "weex-type": "image"
+      }
+    }), _vm._v(" "), _c('div', {
+      staticClass: "nicknamewrap weex-ct weex-div",
+      attrs: {
+        "weex-type": "div"
+      }
+    }, [_c('p', {
+      staticClass: "nickname weex-el weex-text",
+      attrs: {
+        "weex-type": "text"
+      }
+    }, [_vm._v(_vm._s(item.newsTitle))]), _vm._v(" "), _c('p', {
+      staticClass: "time weex-el weex-text",
+      attrs: {
+        "weex-type": "text"
+      }
+    }, [_vm._v("22小时前")])])]), _vm._v(" "), _c('div', {
+      staticClass: "actionbtn-wrap weex-ct weex-div",
+      attrs: {
+        "weex-type": "div"
+      }
+    }, [_c('p', {
+      staticClass: "actiontext weex-el weex-text",
+      attrs: {
+        "weex-type": "text",
+        "data-evt-click": ""
+      },
+      on: {
+        "click": _vm.$stopOuterA,
+        "weex$tap": function($event) {
+          $event.stopPropagation();
+          return _vm.prase($event)
+        }
+      }
+    }, [_vm._v("❤️点赞")]), _vm._v(" "), _c('p', {
+      staticClass: "actiontext weex-el weex-text",
+      attrs: {
+        "weex-type": "text",
+        "data-evt-click": ""
+      },
+      on: {
+        "click": _vm.$stopOuterA,
+        "weex$tap": function($event) {
+          $event.stopPropagation();
+          return _vm.report($event)
+        }
+      }
+    }, [_vm._v("举报")]), _vm._v(" "), _c('p', {
+      staticClass: "actiontext weex-el weex-text",
+      attrs: {
+        "weex-type": "text",
+        "data-evt-click": ""
+      },
+      on: {
+        "click": _vm.$stopOuterA,
+        "weex$tap": function($event) {
+          $event.stopPropagation();
+          return _vm.aopt($event)
+        }
+      }
+    }, [_vm._v("采纳")])])]), _vm._v(" "), _c('p', {
+      staticClass: "desc weex-el weex-text",
+      attrs: {
+        "weex-type": "text"
+      }
+    }, [_vm._v(_vm._s(item.newsContent))]), _vm._v(" "), _c('p', {
+      staticClass: "comment weex-el weex-text",
+      attrs: {
+        "weex-type": "text"
+      }
+    }, [_vm._v("324评论    2012-12-12")])])])
+  }), _vm._v(" "), _c('loading', {
+    staticClass: "loadingcom",
+    attrs: {
+      "display": _vm.isLoading ? 'show' : 'hide',
+      "data-evt-loading": ""
     },
-    on: {
-      "click": _vm.$stopOuterA,
-      "weex$tap": function($event) {
+    nativeOn: {
+      "loading": function($event) {
         $event.stopPropagation();
-        return _vm.pushClick($event)
+        return _vm.loadmore($event)
       }
     }
-  }, [_vm._v("click to push!")]), _vm._v(" "), _c('p', {
-    staticClass: "greeting weex-el weex-text",
+  }, [_c('p', {
+    staticClass: "loadingtext weex-el weex-text",
     attrs: {
-      "weex-type": "text",
-      "data-evt-click": ""
-    },
-    on: {
-      "click": _vm.$stopOuterA,
-      "weex$tap": function($event) {
-        $event.stopPropagation();
-        return _vm.pushOneCellClick($event)
-      }
+      "weex-type": "text"
     }
-  }, [_vm._v("一个cell")]), _vm._v(" "), _c('p', {
-    staticClass: "greeting weex-el weex-text",
-    attrs: {
-      "weex-type": "text",
-      "data-evt-click": ""
-    },
-    on: {
-      "click": _vm.$stopOuterA,
-      "weex$tap": function($event) {
-        $event.stopPropagation();
-        return _vm.pushOneComponentClick($event)
-      }
-    }
-  }, [_vm._v("一个原生的cell")]), _vm._v(" "), _c('p', {
-    staticClass: "greeting weex-el weex-text",
-    attrs: {
-      "weex-type": "text",
-      "data-evt-click": ""
-    },
-    on: {
-      "click": _vm.$stopOuterA,
-      "weex$tap": function($event) {
-        $event.stopPropagation();
-        return _vm.lfyClick($event)
-      }
-    }
-  }, [_vm._v("李飞燕demo")]), _vm._v(" "), _c('p', {
-    staticClass: "greeting weex-el weex-text",
-    attrs: {
-      "weex-type": "text",
-      "data-evt-click": ""
-    },
-    on: {
-      "click": _vm.$stopOuterA,
-      "weex$tap": function($event) {
-        $event.stopPropagation();
-        return _vm.zy1Click($event)
-      }
-    }
-  }, [_vm._v("曾勇demo-text")]), _vm._v(" "), _c('p', {
-    staticClass: "greeting weex-el weex-text",
-    attrs: {
-      "weex-type": "text",
-      "data-evt-click": ""
-    },
-    on: {
-      "click": _vm.$stopOuterA,
-      "weex$tap": function($event) {
-        $event.stopPropagation();
-        return _vm.zy2Click($event)
-      }
-    }
-  }, [_vm._v("曾勇demo-image")])])
+  }, [_vm._v("加载更多")]), _vm._v(" "), _c('loading-indicator', {
+    staticClass: "indicator",
+    attrs: {}
+  })], 1)], 2)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-cfd94c0a", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-4ff17660", module.exports)
   }
 }
 

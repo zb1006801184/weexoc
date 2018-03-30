@@ -11,6 +11,9 @@
 #import "WXCustMoudelViewController.h"
 #import "CellDemoViewController.h"
 #import "ComponentCellViewController.h"
+#import "ZYDemoViewController.h"
+#import "LFYDemoViewController.h"
+#import "ZYDemoImageViewController.h"
 @implementation showLoadingView
 WX_EXPORT_METHOD(@selector(showView:))
 WX_EXPORT_METHOD(@selector(callJS:))
@@ -39,6 +42,15 @@ WX_EXPORT_METHOD(@selector(pushCustModuleVC:))
     }else if (selectVC == 3) {
         ComponentCellViewController *cellVC = [[ComponentCellViewController alloc]init];
         [[self getCurrentVC].navigationController pushViewController:cellVC animated:YES];
+    }else if (selectVC == 4) {
+        LFYDemoViewController *cellVC = [[LFYDemoViewController alloc]init];
+        [[self getCurrentVC].navigationController pushViewController:cellVC animated:YES];
+    }else if (selectVC == 5) {
+        ZYDemoViewController *cellVC = [[ZYDemoViewController alloc]init];
+        [[self getCurrentVC].navigationController pushViewController:cellVC animated:YES];
+    }else if (selectVC == 6) {
+        ZYDemoImageViewController *imageVC = [[ZYDemoImageViewController alloc]init];
+        [[self getCurrentVC].navigationController pushViewController:imageVC animated:YES];
     }
 }
 
