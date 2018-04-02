@@ -62,62 +62,22 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 12);
+/******/ 	return __webpack_require__(__webpack_require__.s = 26);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 0:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-//
-//
-//
-//
-//
-
-var navigator = weex.requireModule('navigator');
-exports.default = {
-    methods: {
-        toBack: function toBack() {
-            navigator.pop({ animated: "true" });
-        }
-    }
-};
-
-/***/ }),
-
-/***/ 1:
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('text', {
-    on: {
-      "click": _vm.toBack
-    }
-  }, [_vm._v("1234555")])
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-
-/***/ }),
-
-/***/ 12:
+/***/ 26:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* script */
-__vue_exports__ = __webpack_require__(0)
+__vue_exports__ = __webpack_require__(4)
 
 /* template */
-var __vue_template__ = __webpack_require__(1)
+var __vue_template__ = __webpack_require__(5)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -146,6 +106,46 @@ module.exports = __vue_exports__
 module.exports.el = 'true'
 new Vue(module.exports)
 
+
+/***/ }),
+
+/***/ 4:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+//
+//
+//
+//
+//
+
+var navigator = weex.requireModule('navigator');
+exports.default = {
+    methods: {
+        toBack: function toBack() {
+            navigator.pop({ animated: "true" });
+        }
+    }
+};
+
+/***/ }),
+
+/***/ 5:
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('text', {
+    on: {
+      "click": _vm.toBack
+    }
+  }, [_vm._v("1234555")])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
 
 /***/ })
 

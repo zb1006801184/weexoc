@@ -62,11 +62,206 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 28);
+/******/ 	return __webpack_require__(__webpack_require__.s = 42);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
+/***/ (function(module, exports) {
+
+/* globals __VUE_SSR_CONTEXT__ */
+
+// this module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle
+
+module.exports = function normalizeComponent (
+  rawScriptExports,
+  compiledTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier /* server only */
+) {
+  var esModule
+  var scriptExports = rawScriptExports = rawScriptExports || {}
+
+  // ES6 modules interop
+  var type = typeof rawScriptExports.default
+  if (type === 'object' || type === 'function') {
+    esModule = rawScriptExports
+    scriptExports = rawScriptExports.default
+  }
+
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (compiledTemplate) {
+    options.render = compiledTemplate.render
+    options.staticRenderFns = compiledTemplate.staticRenderFns
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = injectStyles
+  }
+
+  if (hook) {
+    var functional = options.functional
+    var existing = functional
+      ? options.render
+      : options.beforeCreate
+    if (!functional) {
+      // inject component registration as beforeCreate hook
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    } else {
+      // register for functioal component in vue file
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return existing(h, context)
+      }
+    }
+  }
+
+  return {
+    esModule: esModule,
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+
+/***/ 14:
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var Component = __webpack_require__(0)(
+  /* script */
+  __webpack_require__(15),
+  /* template */
+  __webpack_require__(16),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/Users/zhubiao/work/weexoc/src/components/HelloWorld.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] HelloWorld.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-614a0b7c", Component.options)
+  } else {
+    hotAPI.reload("data-v-614a0b7c", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 15:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+//
+//
+//
+//
+//
+
+var navigator = weex.requireModule('navigator');
+exports.default = {
+    methods: {
+        toBack: function toBack() {
+            navigator.pop({ animated: "true" });
+        }
+    }
+};
+
+/***/ }),
+
+/***/ 16:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('p', {
+    staticClass: " weex-el weex-text",
+    attrs: {
+      "weex-type": "text",
+      "data-evt-click": ""
+    },
+    on: {
+      "click": _vm.$stopOuterA,
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        return _vm.toBack($event)
+      }
+    }
+  }, [_vm._v("1234555")])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-614a0b7c", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ 3:
 /***/ (function(module, exports) {
 
 var g;
@@ -93,7 +288,8 @@ module.exports = g;
 
 
 /***/ }),
-/* 1 */
+
+/***/ 4:
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -283,104 +479,31 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 2 */
-/***/ (function(module, exports) {
 
-/* globals __VUE_SSR_CONTEXT__ */
+/***/ 42:
+/***/ (function(module, exports, __webpack_require__) {
 
-// this module is a runtime utility for cleaner component module output and will
-// be included in the final webpack user bundle
+"use strict";
 
-module.exports = function normalizeComponent (
-  rawScriptExports,
-  compiledTemplate,
-  injectStyles,
-  scopeId,
-  moduleIdentifier /* server only */
-) {
-  var esModule
-  var scriptExports = rawScriptExports = rawScriptExports || {}
 
-  // ES6 modules interop
-  var type = typeof rawScriptExports.default
-  if (type === 'object' || type === 'function') {
-    esModule = rawScriptExports
-    scriptExports = rawScriptExports.default
-  }
+var _vue = __webpack_require__(6);
 
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
+var _vue2 = _interopRequireDefault(_vue);
 
-  // render functions
-  if (compiledTemplate) {
-    options.render = compiledTemplate.render
-    options.staticRenderFns = compiledTemplate.staticRenderFns
-  }
+var _weexVueRender = __webpack_require__(9);
 
-  // scopedId
-  if (scopeId) {
-    options._scopeId = scopeId
-  }
+var _weexVueRender2 = _interopRequireDefault(_weexVueRender);
 
-  var hook
-  if (moduleIdentifier) { // server build
-    hook = function (context) {
-      // 2.3 injection
-      context =
-        context || // cached call
-        (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
-      // 2.2 with runInNewContext: true
-      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
-        context = __VUE_SSR_CONTEXT__
-      }
-      // inject component styles
-      if (injectStyles) {
-        injectStyles.call(this, context)
-      }
-      // register component module identifier for async chunk inferrence
-      if (context && context._registeredComponents) {
-        context._registeredComponents.add(moduleIdentifier)
-      }
-    }
-    // used by ssr in case component is cached and beforeCreate
-    // never gets called
-    options._ssrRegister = hook
-  } else if (injectStyles) {
-    hook = injectStyles
-  }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-  if (hook) {
-    var functional = options.functional
-    var existing = functional
-      ? options.render
-      : options.beforeCreate
-    if (!functional) {
-      // inject component registration as beforeCreate hook
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
-    } else {
-      // register for functioal component in vue file
-      options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
-        return existing(h, context)
-      }
-    }
-  }
+_weexVueRender2.default.init(_vue2.default);
 
-  return {
-    esModule: esModule,
-    exports: scriptExports,
-    options: options
-  }
-}
-
+var App = __webpack_require__(14);
+new _vue2.default(_vue2.default.util.extend({ el: '#root' }, App));
 
 /***/ }),
-/* 3 */
+
+/***/ 6:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8418,10 +8541,11 @@ if (inBrowser) {
 
 /* harmony default export */ __webpack_exports__["default"] = (Vue);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1), __webpack_require__(0), __webpack_require__(4).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(4), __webpack_require__(3), __webpack_require__(7).setImmediate))
 
 /***/ }),
-/* 4 */
+
+/***/ 7:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var apply = Function.prototype.apply;
@@ -8474,7 +8598,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(5);
+__webpack_require__(8);
 // On some exotic environments, it's not clear which object `setimmeidate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
@@ -8485,10 +8609,11 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
                          (typeof global !== "undefined" && global.clearImmediate) ||
                          (this && this.clearImmediate);
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 5 */
+
+/***/ 8:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -8678,10 +8803,11 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(4)))
 
 /***/ }),
-/* 6 */
+
+/***/ 9:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19138,140 +19264,8 @@ console.log('START WEEX VUE RENDER: 1.0.19, Build 2018-03-15 16:44.');
 
   return weex;
 });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var Component = __webpack_require__(2)(
-  /* script */
-  __webpack_require__(11),
-  /* template */
-  __webpack_require__(12),
-  /* styles */
-  null,
-  /* scopeId */
-  null,
-  /* moduleIdentifier (server only) */
-  null
-)
-Component.options.__file = "/Users/zhubiao/work/weexoc/src/components/HelloWorld.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] HelloWorld.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-614a0b7c", Component.options)
-  } else {
-    hotAPI.reload("data-v-614a0b7c", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-//
-//
-//
-//
-//
-
-var navigator = weex.requireModule('navigator');
-exports.default = {
-    methods: {
-        toBack: function toBack() {
-            navigator.pop({ animated: "true" });
-        }
-    }
-};
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('p', {
-    staticClass: " weex-el weex-text",
-    attrs: {
-      "weex-type": "text",
-      "data-evt-click": ""
-    },
-    on: {
-      "click": _vm.$stopOuterA,
-      "weex$tap": function($event) {
-        $event.stopPropagation();
-        return _vm.toBack($event)
-      }
-    }
-  }, [_vm._v("1234555")])
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-614a0b7c", module.exports)
-  }
-}
-
-/***/ }),
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */,
-/* 22 */,
-/* 23 */,
-/* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */,
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _vue = __webpack_require__(3);
-
-var _vue2 = _interopRequireDefault(_vue);
-
-var _weexVueRender = __webpack_require__(6);
-
-var _weexVueRender2 = _interopRequireDefault(_weexVueRender);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-_weexVueRender2.default.init(_vue2.default);
-
-var App = __webpack_require__(10);
-new _vue2.default(_vue2.default.util.extend({ el: '#root' }, App));
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ })
-/******/ ]);
+
+/******/ });

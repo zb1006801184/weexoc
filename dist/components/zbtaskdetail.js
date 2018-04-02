@@ -62,26 +62,26 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 16);
+/******/ 	return __webpack_require__(__webpack_require__.s = 258);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 16:
+/***/ 258:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(17)
+__vue_styles__.push(__webpack_require__(259)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(18)
+__vue_exports__ = __webpack_require__(260)
 
 /* template */
-var __vue_template__ = __webpack_require__(19)
+var __vue_template__ = __webpack_require__(261)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -93,10 +93,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/zhubiao/work/weexoc/src/components/CellDemo.vue"
+__vue_options__.__file = "/Users/zhubiao/work/weexoc/src/components/zbtaskdetail.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-2f1553bc"
+__vue_options__._scopeId = "data-v-19f54716"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -114,10 +114,108 @@ new Vue(module.exports)
 
 /***/ }),
 
-/***/ 17:
+/***/ 259:
 /***/ (function(module, exports) {
 
 module.exports = {
+  "firstCell": {
+    "height": "800"
+  },
+  "titleStyle": {
+    "height": "98",
+    "color": "#222222",
+    "fontSize": "38",
+    "lines": 2,
+    "marginLeft": "30",
+    "marginTop": "40",
+    "marginRight": "30"
+  },
+  "userInfoStyle": {
+    "height": "88"
+  },
+  "topDiv1": {
+    "flexDirection": "row",
+    "height": "88",
+    "justifyContent": "space-between",
+    "alignItems": "center",
+    "marginTop": "30"
+  },
+  "headLeft1": {
+    "flexDirection": "row",
+    "justifyContent": "space-around",
+    "marginLeft": "30"
+  },
+  "headName1": {
+    "height": "88",
+    "width": "160",
+    "justifyContent": "center",
+    "alignContent": "center",
+    "marginLeft": "20"
+  },
+  "nameStyle1": {
+    "fontSize": "28",
+    "color": "#B98080"
+  },
+  "timeStyle1": {
+    "fontSize": "20",
+    "color": "#999999"
+  },
+  "headImage1": {
+    "backgroundColor": "#0000FF",
+    "marginLeft": "30",
+    "borderRadius": 44
+  },
+  "rightButton": {
+    "width": "118",
+    "height": "56",
+    "fontSize": "24",
+    "backgroundColor": "#FB3C3C",
+    "borderRadius": "6",
+    "textAlign": "center",
+    "justifyContent": "center",
+    "color": "#FFFFFF"
+  },
+  "rightDivStyle": {
+    "justifyContent": "center",
+    "alignItems": "center",
+    "maxWidth": "118",
+    "height": "58",
+    "marginRight": "30"
+  },
+  "contentTextStyle": {
+    "color": "#666666",
+    "fontSize": "28",
+    "left": "30",
+    "top": "30",
+    "marginRight": "30"
+  },
+  "moneyStyle": {
+    "color": "#ffae00",
+    "fontSize": "28",
+    "top": "30",
+    "left": "30"
+  },
+  "contentMoreImageStyle": {
+    "height": "152",
+    "top": "50",
+    "flexDirection": "row"
+  },
+  "MoreImageCell": {
+    "width": "224",
+    "height": "152",
+    "backgroundColor": "#8B4513"
+  },
+  "bottomDivStyle": {
+    "flexDirection": "row",
+    "justifyContent": "space-around"
+  },
+  "bottomButtonStyle": {
+    "backgroundColor": "#8B4513",
+    "top": "94",
+    "width": "224",
+    "height": "78",
+    "borderRadius": "39"
+  },
   "panel": {
     "width": "750",
     "height": "264",
@@ -201,7 +299,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 18:
+/***/ 260:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -210,6 +308,215 @@ module.exports = {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -253,11 +560,11 @@ exports.default = {
 
 /***/ }),
 
-/***/ 19:
+/***/ 261:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('list', _vm._l((_vm.lists), function(index) {
+  return _c('list', [_vm._m(0), _vm._l((_vm.lists), function(index) {
     return _c('cell', {
       key: index,
       appendAsTree: true,
@@ -268,7 +575,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       staticClass: ["panel"]
     }, [_c('div', {
       staticClass: ["topDiv"]
-    }, [_vm._m(0, true), _c('div', {
+    }, [_vm._m(1, true), _c('div', {
       staticClass: ["rightStyle"]
     }, [_c('image', {
       staticStyle: {
@@ -283,9 +590,75 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       staticClass: ["numberStyle"]
     }, [_vm._v("999")]), _c('text', {
       staticClass: ["numberStyle"]
-    }, [_vm._v("举报")])])]), _vm._m(1, true), _vm._m(2, true)])])
-  }))
+    }, [_vm._v("举报")])])]), _vm._m(2, true), _vm._m(3, true)])])
+  })], 2)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('cell', {
+    staticClass: ["firstCell"],
+    appendAsTree: true,
+    attrs: {
+      "append": "tree"
+    }
+  }, [_c('text', {
+    staticClass: ["titleStyle"]
+  }, [_vm._v("怎么样用手机拍出丁达尔光的效果怎么样用手机拍出丁达尔光的效果？")]), _c('div', {
+    staticClass: ["topDiv1"]
+  }, [_c('div', {
+    staticClass: ["headLeft1"]
+  }, [_c('image', {
+    staticClass: ["headImage1"],
+    staticStyle: {
+      width: "88px",
+      height: "88px"
+    }
+  }), _c('div', {
+    staticClass: ["headName"]
+  }, [_c('text', {
+    staticClass: ["nameStyle"]
+  }, [_vm._v("浅浅最爱笑")]), _c('text', {
+    staticClass: ["timeStyle"]
+  }, [_vm._v("22小时前")])])]), _c('div', {
+    staticClass: ["rightDivStyle"]
+  }, [_c('text', {
+    staticStyle: {
+      width: "118px",
+      height: "56px",
+      fontSize: "24px",
+      backgroundColor: "#FB3C3C",
+      borderRadius: "6px",
+      textAlign: "center",
+      justifyContent: "center",
+      color: "white"
+    }
+  }, [_vm._v("关注")])])]), _c('text', {
+    staticClass: ["contentTextStyle"]
+  }, [_vm._v("给手机充电是我们每天必须要做的事情，也许你觉得拿起充电器随便冲一下就搞定了，@马云 真的是这样吗?其实不然，很多朋友的充电方式")]), _c('text', {
+    staticClass: ["moneyStyle"]
+  }, [_vm._v("悬赏：4个长城币")]), _c('div', {
+    staticClass: ["contentMoreImageStyle"]
+  }, [_c('image', {
+    staticClass: ["MoreImageCell"],
+    staticStyle: {
+      marginLeft: "30px"
+    }
+  }), _c('image', {
+    staticClass: ["MoreImageCell"],
+    staticStyle: {
+      marginLeft: "10px"
+    }
+  }), _c('image', {
+    staticClass: ["MoreImageCell"],
+    staticStyle: {
+      marginLeft: "10px"
+    }
+  })]), _c('div', {
+    staticClass: ["bottomDivStyle"]
+  }, [_c('image', {
+    staticClass: ["bottomButtonStyle"]
+  }), _c('image', {
+    staticClass: ["bottomButtonStyle"]
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: ["headLeft"]
   }, [_c('image', {

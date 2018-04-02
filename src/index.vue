@@ -8,6 +8,8 @@
     <text class="greeting" @click="lfyClick">李飞燕demo-网络请求</text>
     <text class="greeting" @click="zy1Click">曾勇demo-text</text>
     <text class="greeting" @click="zy2Click">曾勇demo-image</text>
+    <text class="greeting" @click="zbClick">4.2任务-zb</text>
+
     <!-- <HelloWorld/> -->
   </div>
 </template>
@@ -59,6 +61,9 @@ export default {
     },
     zy2Click(){
       weex.requireModule("showLoading").pushCustModuleVC({"VC":"6"})
+    },
+    zbClick(){
+      weex.requireModule("showLoading").pushCustModuleVC({"VC":"7"})
     },
     show(){
         modal.toast({

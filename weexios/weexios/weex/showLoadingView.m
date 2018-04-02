@@ -14,6 +14,8 @@
 #import "ZYDemoViewController.h"
 #import "LFYDemoViewController.h"
 #import "ZYDemoImageViewController.h"
+#import "ZBTaskViewController.h"
+#import "ZBTaskDetailViewController.h"
 @implementation showLoadingView
 WX_EXPORT_METHOD(@selector(showView:))
 WX_EXPORT_METHOD(@selector(callJS:))
@@ -51,6 +53,12 @@ WX_EXPORT_METHOD(@selector(pushCustModuleVC:))
     }else if (selectVC == 6) {
         ZYDemoImageViewController *imageVC = [[ZYDemoImageViewController alloc]init];
         [[self getCurrentVC].navigationController pushViewController:imageVC animated:YES];
+    }else if (selectVC == 7) {
+        ZBTaskViewController *taskVC = [[ZBTaskViewController alloc]init];
+        [[self getCurrentVC].navigationController pushViewController:taskVC animated:YES];
+    }else if (selectVC == 8) {
+        ZBTaskDetailViewController *taskDetailVC = [[ZBTaskDetailViewController alloc]init];
+        [[self getCurrentVC].navigationController pushViewController:taskDetailVC animated:YES];
     }
 }
 

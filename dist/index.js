@@ -62,66 +62,26 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 25);
+/******/ 	return __webpack_require__(__webpack_require__.s = 270);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 0:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-//
-//
-//
-//
-//
-
-var navigator = weex.requireModule('navigator');
-exports.default = {
-    methods: {
-        toBack: function toBack() {
-            navigator.pop({ animated: "true" });
-        }
-    }
-};
-
-/***/ }),
-
-/***/ 1:
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('text', {
-    on: {
-      "click": _vm.toBack
-    }
-  }, [_vm._v("1234555")])
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-
-/***/ }),
-
-/***/ 25:
+/***/ 270:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(26)
+__vue_styles__.push(__webpack_require__(271)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(27)
+__vue_exports__ = __webpack_require__(272)
 
 /* template */
-var __vue_template__ = __webpack_require__(29)
+var __vue_template__ = __webpack_require__(274)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -154,7 +114,7 @@ new Vue(module.exports)
 
 /***/ }),
 
-/***/ 26:
+/***/ 271:
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -184,7 +144,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 27:
+/***/ 272:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -194,13 +154,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _HelloWorld = __webpack_require__(28);
+var _HelloWorld = __webpack_require__(273);
 
 var _HelloWorld2 = _interopRequireDefault(_HelloWorld);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var modal = weex.requireModule('modal'); //
+//
+//
 //
 //
 //
@@ -264,6 +226,9 @@ exports.default = {
     zy2Click: function zy2Click() {
       weex.requireModule("showLoading").pushCustModuleVC({ "VC": "6" });
     },
+    zbClick: function zbClick() {
+      weex.requireModule("showLoading").pushCustModuleVC({ "VC": "7" });
+    },
     show: function show() {
       modal.toast({
         message: '展示展示1',
@@ -275,17 +240,17 @@ exports.default = {
 
 /***/ }),
 
-/***/ 28:
+/***/ 273:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* script */
-__vue_exports__ = __webpack_require__(0)
+__vue_exports__ = __webpack_require__(4)
 
 /* template */
-var __vue_template__ = __webpack_require__(1)
+var __vue_template__ = __webpack_require__(5)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -315,7 +280,7 @@ module.exports = __vue_exports__
 
 /***/ }),
 
-/***/ 29:
+/***/ 274:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -361,7 +326,52 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     on: {
       "click": _vm.zy2Click
     }
-  }, [_vm._v("曾勇demo-image")])])
+  }, [_vm._v("曾勇demo-image")]), _c('text', {
+    staticClass: ["greeting"],
+    on: {
+      "click": _vm.zbClick
+    }
+  }, [_vm._v("4.2任务-zb")])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+
+/***/ 4:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+//
+//
+//
+//
+//
+
+var navigator = weex.requireModule('navigator');
+exports.default = {
+    methods: {
+        toBack: function toBack() {
+            navigator.pop({ animated: "true" });
+        }
+    }
+};
+
+/***/ }),
+
+/***/ 5:
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('text', {
+    on: {
+      "click": _vm.toBack
+    }
+  }, [_vm._v("1234555")])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 
