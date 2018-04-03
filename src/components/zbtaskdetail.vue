@@ -1,13 +1,13 @@
 <template>
   <list>
     <cell class="firstCell">
-        <text class="titleStyle">怎么样用手机拍出丁达尔光的效果怎么样用手机拍出丁达尔光的效果？</text>
+        <text class="titleStyle">{{userInfo.title}}</text>
         <!-- 中间用户信息部分 -->
         <div class="topDiv1">
            <div class="headLeft1">
-               <image  style="width:88px;height:88px;"  class="headImage1"/>
-               <div class="headName"> 
-                   <text class="nameStyle">浅浅最爱笑</text>
+               <image  :src = userInfo.logo  style="width:88px;height:88px;"  class="headImage1"/>
+               <div class="headName1"> 
+                   <text class="nameStyle">{{userInfo.memberName}}</text>
                    <text class="timeStyle">22小时前</text>
                </div>
            </div>
@@ -16,43 +16,43 @@
            </div>
         </div>
         <!-- 文字内容部分 -->
-        <text class="contentTextStyle">给手机充电是我们每天必须要做的事情，也许你觉得拿起充电器随便冲一下就搞定了，@马云 真的是这样吗?其实不然，很多朋友的充电方式</text>
-        <text class="moneyStyle">悬赏：4个长城币</text>
+        <text class="contentTextStyle">{{userInfo.contentList[0].content}}</text>
+        <text class="moneyStyle">悬赏：{{userInfo.reward}}个长城币</text>
         <div class="contentMoreImageStyle">
-            <image class="MoreImageCell" style="margin-left:30px"/>
-            <image class="MoreImageCell" style="margin-left:10px"/>
-            <image class="MoreImageCell" style="margin-left:10px"/>
+            <image :src = userInfo.imageUrl[0] class="MoreImageCell" style="margin-left:30px"/>
+            <image :src = userInfo.imageUrl[0] class="MoreImageCell" style="margin-left:10px"/>
+            <image :src = userInfo.imageUrl[0] class="MoreImageCell" style="margin-left:10px"/>
         </div>
         <div class="bottomDivStyle">
             <image class="bottomButtonStyle"/>
             <image class="bottomButtonStyle"/>
-
         </div>
     </cell>
     <cell v-for="index in lists" :key="index">
       <div class="panel">
         <div class="topDiv">
            <div class="headLeft">
-               <image  style="width:70px;height:70px;"  class="headImage"/>
+               <image  :src = index.logo style="width:70px;height:70px;"  class="headImage"/>
                <div class="headName"> 
-                   <text class="nameStyle">浅浅最爱笑</text>
+                   <text class="nameStyle">{{index.memberName}}</text>
                    <text class="timeStyle">22小时前</text>
                </div>
            </div>
           
            <div class="rightStyle">
                 <image :src="zan" style="width:32px;height:32px;margin-right:10px;" />
-                <text class="numberStyle">999</text>
+                <text class="numberStyle">{{index.fabulousSum}}</text>
                 <text class="numberStyle">举报</text>
            </div>
         </div>
-        <div class="contentText">
-            <text>这篇文章对我很有用，我希望有更多的优秀方法可以展示给大家，供大家学习</text>
+        <div >
+            <text class="cellContentStyle">{{index.content}}</text>
         </div>
         <div class="bottomStyle">
-            <text class="bottomCommentStyle">324评论</text>
+            <text class="bottomCommentStyle">{{index.report}}评论</text>
             <text class="bottomeTimeStyle">2012-12-12</text>
         </div>
+        <div style="height:30px;"></div>
       </div>
     </cell>
   </list>
@@ -78,19 +78,19 @@
     height: 88px;
     justify-content:space-between;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 10px;
   }
 .headLeft1 {
     flex-direction: row;
-    justify-content: space-around;
-    margin-left: 30px;
+    justify-content: space-between;
+    margin-left: 20px;
   }
 .headName1 {
     height: 88px;
     width: 160px;
     justify-content: center;
     align-content: center;
-    margin-left: 20px;
+    margin-left: 10px;
   }
 .nameStyle1{
     font-size: 28px;
@@ -102,7 +102,7 @@
   }
 .headImage1{
     background-color: blue;
-    margin-left:30px ;
+    margin-left:10px ;
     border-radius: 44;
   }
   .rightButton{
@@ -132,18 +132,19 @@
   .moneyStyle{
       color: #ffae00;
       font-size: 28px;
-      top: 30px;
+      top: 50px;
       left: 30px;
   }
 .contentMoreImageStyle{
       height: 152px;
-      top: 50px;
+      top: 70px;
       flex-direction: row;
   }
 .MoreImageCell{
       width: 224px;
       height: 152px;
       background-color: saddlebrown;
+      border-radius: 8px;
   }
   .bottomDivStyle{
       flex-direction: row;
@@ -151,14 +152,14 @@
   }
   .bottomButtonStyle{
       background-color: saddlebrown;
-      top: 94px;
+      top: 114px;
       width: 224px;
       height: 78px;
       border-radius: 39px;
   }
 .panel {
     width: 750px;
-    height: 264px;
+    /* height: 264px; */
     border-width: 1px;
     border-style: solid;
     border-color: #eeeeee;
@@ -177,7 +178,7 @@
   .headImage {
       background-color: tomato;
       margin-left:30px ;
-      margin-top: 30px;
+      margin-top: 20px;
       border-radius: 35;
   }
   .headLeft {
@@ -188,8 +189,8 @@
   .headName {
       height: 90px;
       width: 160px;
-      justify-content: center;
-      align-content: center;
+      /* justify-content: center; */
+      /* align-content: center; */
       margin-left: 20px;
       margin-top: 20px;
   }
@@ -237,16 +238,46 @@
       font-size: 20px;
       margin-left:40px;
   }
+  .cellContentStyle {
+      color: #444444;
+      font-size: 26px;
+      margin-top: 30px;
+      margin-left: 120px;
+  }
 </style>
 <script>
+var stream = weex.requireModule('stream');
+var POST_URL = 'http://192.168.50.251:18181/mobile/releaseConsultation/selectConsultationByTitle?publishMemberId=243&consultationType=2&consultationId=1770';
+var COMMENT_URL = 'http://192.168.50.251:18181/mobile/comment/selectAllComment?consultationId=1770';
 export default {
  data () {
       return {
         zan: 'assets:zan',
-        lists: [
-          '1', '2', '3', '4','5','6','7'
-        ]
+        lists: ['1', '2', '3', '4','5','6','7'],
+        userInfo:{},
       }
-    }
+    },
+created () {
+    this.reloadData(POST_URL,res=>{
+    this.userInfo = res.data.data;
+    // console.log('信息数据'+JSON.stringify(this.userInfo));
+    });
+    this.reloadData(COMMENT_URL,res=>{
+    this.lists = res.data.data;
+    // console.log('评论数据'+JSON.stringify(this.lists));
+    });
+},
+ methods: {
+    //网络请求
+    //加载数据
+    reloadData(url, callback) {
+        return stream.fetch({
+            method: 'POST',
+            url: url,
+            type: 'json'
+        }, callback);
+    },
+}
+
 }
 </script>

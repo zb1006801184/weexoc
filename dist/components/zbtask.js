@@ -1658,8 +1658,7 @@ module.exports = {
     "height": "300",
     "marginLeft": "30",
     "marginTop": "30",
-    "marginRight": "30",
-    "backgroundColor": "#87CEEB"
+    "marginRight": "30"
   },
   "contentMoreImageStyle": {
     "height": "152",
@@ -1826,8 +1825,13 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 //
 //
 //
+//
 
 var dom = weex.requireModule('dom');
+
+var stream = weex.requireModule('stream');
+var POST_URL = 'http://192.168.50.251:18181/mobile/releaseConsultation/selectConsultationListByColumn?columnId=2&consultationType=1';
+
 exports.default = {
   components: { WxcTabPage: _weexUi.WxcTabPage, WxcPanItem: _weexUi.WxcPanItem },
   data: function data() {
@@ -1835,14 +1839,20 @@ exports.default = {
       tabTitles: _config2.default.tabTitles,
       tabStyles: _config2.default.tabStyles,
       tabList: [],
-      demoList: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      demoList: [9, 2, 3, 4],
       tabPageHeight: 1334
     };
   },
   created: function created() {
+    var _this = this;
+
     this.tabPageHeight = _weexUi.Utils.env.getPageHeight();
     this.tabList = [].concat(_toConsumableArray(Array(this.tabTitles.length).keys())).map(function (i) {
       return [];
+    });
+    this.reloadData(POST_URL, function (res) {
+      _this.demoList = res.data.data;
+      Vue.set(_this.tabList, 0, res.data.data);
     });
     Vue.set(this.tabList, 0, this.demoList);
   },
@@ -1868,6 +1878,16 @@ exports.default = {
     wxcPanItemClicked: function wxcPanItemClicked(e) {
       console.log("123" + e);
       weex.requireModule("showLoading").pushCustModuleVC({ "VC": "8" });
+    },
+
+    //网络请求
+    //加载数据
+    reloadData: function reloadData(url, callback) {
+      return stream.fetch({
+        method: 'POST',
+        url: url,
+        type: 'json'
+      }, callback);
     }
   }
 };
@@ -18026,47 +18046,56 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
           "wxcPanItemClicked": _vm.wxcPanItemClicked,
           "wxcPanItemPan": _vm.wxcPanItemPan
         }
-      }, [(dicModel === 2 ? true : false) ? _c('div', {
+      }, [(dicModel.modelType == 0 ? true : false) ? _c('div', {
         staticClass: ["contentStyle"]
       }, [_c('text', {
         staticClass: ["contextStyle"]
-      }, [_vm._v("手机每天充电，一定要记得避开这4大误区1")]), _c('text', {
+      }, [_vm._v(_vm._s(dicModel.title))]), _c('text', {
         staticClass: ["bottomTextStyle"]
-      }, [_vm._v("泡芙小姐   869评论   1小时前")])]) : _vm._e()]), (dicModel === 2 ? true : false) ? _c('div', {
+      }, [_vm._v(_vm._s(dicModel.memberName) + "   " + _vm._s(dicModel.business) + "评论   五天前")])]) : _vm._e()]), (dicModel.modelType == 1 ? true : false) ? _c('div', {
         staticClass: ["contengImageCell"]
       }, [_c('text', {
         staticClass: ["contextStyle"]
-      }, [_vm._v("手机每天充电，一定要记得避开这4大误区2")]), _c('image', {
+      }, [_vm._v(_vm._s(dicModel.title))]), _c('image', {
         staticClass: ["contentImageStyle"],
         attrs: {
-          "src": 'assets:zan'
+          "src": dicModel.imageUrl ? dicModel.imageUrl[0] : dicModel.imgUrl
         }
       }), _c('text', {
         staticClass: ["bottomTextStyle"]
-      }, [_vm._v("泡芙小姐   869评论   1小时前")])]) : _vm._e(), (dicModel === 2 ? true : false) ? _c('div', {
+      }, [_vm._v(_vm._s(dicModel.memberName) + "   " + _vm._s(dicModel.business) + "评论   五天前")])]) : _vm._e(), (dicModel.modelType == 3 ? true : false) ? _c('div', {
         staticClass: ["contentMoreImageCell"]
       }, [_c('text', {
         staticClass: ["contextStyle"]
-      }, [_vm._v("手机每天充电，一定要记得避开这4大误区3")]), _c('div', {
+      }, [_vm._v(_vm._s(dicModel.title))]), _c('div', {
         staticClass: ["contentMoreImageStyle"]
       }, [_c('image', {
         staticClass: ["MoreImageCell"],
         staticStyle: {
           marginLeft: "30px"
+        },
+        attrs: {
+          "src": dicModel.imageUrl ? dicModel.imageUrl[0] : dicModel.imgUrl
         }
       }), _c('image', {
         staticClass: ["MoreImageCell"],
         staticStyle: {
           marginLeft: "10px"
+        },
+        attrs: {
+          "src": dicModel.imageUrl ? dicModel.imageUrl[1] : dicModel.imgUrl
         }
       }), _c('image', {
         staticClass: ["MoreImageCell"],
         staticStyle: {
           marginLeft: "10px"
+        },
+        attrs: {
+          "src": dicModel.imageUrl ? dicModel.imageUrl[2] : dicModel.imgUrl
         }
       })]), _c('text', {
         staticClass: ["bottomTextStyle"]
-      }, [_vm._v("泡芙小姐   869评论   1小时前")])]) : _vm._e()], 1)
+      }, [_vm._v(_vm._s(dicModel.memberName) + "   " + _vm._s(dicModel.business) + "评论   五天前")])]) : _vm._e()], 1)
     })], 2)
   }))
 },staticRenderFns: []}

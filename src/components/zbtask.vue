@@ -17,26 +17,27 @@
         <wxc-pan-item :url="url" 
                       @wxcPanItemClicked="wxcPanItemClicked"
                       @wxcPanItemPan="wxcPanItemPan">
-            <div class="contentStyle" v-if="dicModel===2 ? true:false">
-                <text class="contextStyle">手机每天充电，一定要记得避开这4大误区1</text>
-                <text class="bottomTextStyle">泡芙小姐   869评论   1小时前</text>
+            <div class="contentStyle" v-if="dicModel.modelType==0 ? true:false">
+                <text class="contextStyle">{{dicModel.title}}</text>
+                <text class="bottomTextStyle">{{dicModel.memberName}}   {{dicModel.business}}评论   五天前</text>
             </div>
         </wxc-pan-item>
              <!-- 第二种cell  单图模式-->
-            <div class="contengImageCell" v-if="dicModel===2 ? true:false">
-                <text class="contextStyle" >手机每天充电，一定要记得避开这4大误区2</text>
-                <image :src="'assets:zan'" class="contentImageStyle" />
-                <text class="bottomTextStyle">泡芙小姐   869评论   1小时前</text>
+            <div class="contengImageCell" v-if="dicModel.modelType==1 ? true:false">
+                <text class="contextStyle" >{{dicModel.title}}</text>
+                <!-- <image :src= dicModel.imgUrl   class="contentImageStyle" /> -->
+                <image :src=  dicModel.imageUrl?dicModel.imageUrl[0]:dicModel.imgUrl     class="contentImageStyle" />
+                <text class="bottomTextStyle">{{dicModel.memberName}}   {{dicModel.business}}评论   五天前</text>
             </div>
              <!-- 第三种cell  三图模式 -->
-            <div class="contentMoreImageCell" v-if="dicModel===2 ? true:false">
-                <text class="contextStyle" >手机每天充电，一定要记得避开这4大误区3</text>
+            <div class="contentMoreImageCell" v-if="dicModel.modelType==3 ? true:false">
+                <text class="contextStyle" >{{dicModel.title}}</text>
                 <div class="contentMoreImageStyle">
-                    <image class="MoreImageCell" style="margin-left:30px"/>
-                    <image class="MoreImageCell" style="margin-left:10px"/>
-                    <image class="MoreImageCell" style="margin-left:10px"/>
+                    <image :src=  dicModel.imageUrl?dicModel.imageUrl[0]:dicModel.imgUrl  class="MoreImageCell" style="margin-left:30px"/>
+                    <image :src=  dicModel.imageUrl?dicModel.imageUrl[1]:dicModel.imgUrl  class="MoreImageCell" style="margin-left:10px"/>
+                    <image :src=  dicModel.imageUrl?dicModel.imageUrl[2]:dicModel.imgUrl  class="MoreImageCell" style="margin-left:10px"/>
                 </div>
-                <text class="bottomTextStyle">泡芙小姐   869评论   1小时前</text>         
+                <text class="bottomTextStyle">{{dicModel.memberName}}   {{dicModel.business}}评论   五天前</text>         
             </div>
       </cell>
     </list>
@@ -105,7 +106,7 @@
       margin-left: 30px;
       margin-top: 30px;
       margin-right: 30px;
-      background-color: skyblue;
+      /* background-color: skyblue; */
   }
   .contentMoreImageStyle{
       height: 152px;
@@ -128,6 +129,8 @@
   const dom = weex.requireModule('dom');
   import { WxcTabPage, WxcPanItem, Utils, BindEnv } from 'weex-ui';
   import Config from './config'
+	var stream = weex.requireModule('stream');
+	var POST_URL = 'http://192.168.50.251:18181/mobile/releaseConsultation/selectConsultationListByColumn?columnId=2&consultationType=1';
 
   export default {
     components: { WxcTabPage, WxcPanItem },
@@ -135,12 +138,16 @@
       tabTitles: Config.tabTitles,
       tabStyles: Config.tabStyles,
       tabList: [],
-      demoList: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      demoList: [9,2,3,4],
       tabPageHeight: 1334
     }),
     created () {
       this.tabPageHeight = Utils.env.getPageHeight();
       this.tabList = [...Array(this.tabTitles.length).keys()].map(i => []);
+      this.reloadData(POST_URL,res=>{
+      this.demoList = res.data.data;
+      Vue.set(this.tabList, 0, res.data.data);
+			})
       Vue.set(this.tabList, 0, this.demoList);
     },
     methods: {
@@ -164,6 +171,16 @@
           console.log("123"+e);
          weex.requireModule("showLoading").pushCustModuleVC({"VC":"8"})
       },
+      //网络请求
+      	//加载数据
+			reloadData(url, callback) {
+				return stream.fetch({
+					method: 'POST',
+					url: url,
+					type: 'json'
+				}, callback);
+			},
+
     }
   };
 </script>

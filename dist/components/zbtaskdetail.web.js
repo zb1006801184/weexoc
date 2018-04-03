@@ -642,7 +642,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.firstCell{\n    height: 10.66667rem;\n}\n.titleStyle{\n    height: 1.30667rem;\n    color: #222222;\n    font-size: 0.50667rem;\n    lines:2;\n    margin-left: 0.4rem;\n    margin-top: 0.53333rem;\n    margin-right: 0.4rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-line-clamp: 2;\n}\n.userInfoStyle{\n    height: 1.17333rem;\n}\n.topDiv1 {\n    flex-direction: row;\n    height: 1.17333rem;\n    justify-content:space-between;\n    align-items: center;\n    margin-top: 0.4rem;\n}\n.headLeft1 {\n    flex-direction: row;\n    justify-content: space-around;\n    margin-left: 0.4rem;\n}\n.headName1 {\n    height: 1.17333rem;\n    width: 2.13333rem;\n    justify-content: center;\n    align-content: center;\n    margin-left: 0.26667rem;\n}\n.nameStyle1{\n    font-size: 0.37333rem;\n    color:#B98080;\n}\n.timeStyle1{\n    font-size: 0.26667rem;\n    color: #999999;\n}\n.headImage1{\n    background-color: blue;\n    margin-left:0.4rem;\n    border-radius: 44;\n}\n.rightButton{\n    width: 1.57333rem;\n    height: 0.74667rem;\n    font-size: 0.32rem;\n    background-color: #FB3C3C;\n    border-radius: 0.08rem;\n    text-align: center;\n    justify-content:center;\n    color: white;\n}\n.rightDivStyle{\n      justify-content: center;\n      align-items: center;\n      max-width: 1.57333rem;\n      height: 0.77333rem;   \n      margin-right: 0.4rem;\n}\n.contentTextStyle{\n      color: #666666;\n      font-size: 0.37333rem;\n      left: 0.4rem;\n      top: 0.4rem;\n      margin-right: 0.4rem;\n}\n.moneyStyle{\n      color: #ffae00;\n      font-size: 0.37333rem;\n      top: 0.4rem;\n      left: 0.4rem;\n}\n.contentMoreImageStyle{\n      height: 2.02667rem;\n      top: 0.66667rem;\n      flex-direction: row;\n}\n.MoreImageCell{\n      width: 2.98667rem;\n      height: 2.02667rem;\n      background-color: saddlebrown;\n}\n.bottomDivStyle{\n      flex-direction: row;\n      justify-content: space-around;\n}\n.bottomButtonStyle{\n      background-color: saddlebrown;\n      top: 1.25333rem;\n      width: 2.98667rem;\n      height: 1.04rem;\n      border-radius: 0.52rem;\n}\n.panel {\n    width: 10rem;\n    height: 3.52rem;\n    border-width: 1px;\n    border-style: solid;\n    border-color: #eeeeee;\n    background-color: white;\n}\n.text {\n    font-size: 0.66667rem;\n    text-align: center;\n    color: #41B883;\n}\n.topDiv {\n      flex-direction: row;\n      height: 1.2rem;\n      justify-content: space-between;\n}\n.headImage {\n      background-color: tomato;\n      margin-left:0.4rem;\n      margin-top: 0.4rem;\n      border-radius: 35;\n}\n.headLeft {\n      flex-direction: row;\n      justify-content: space-around;\n      /* padding-top: 30px; */\n}\n.headName {\n      height: 1.2rem;\n      width: 2.13333rem;\n      justify-content: center;\n      align-content: center;\n      margin-left: 0.26667rem;\n      margin-top: 0.26667rem;\n}\n.contentText {\n      margin-left: 1.6rem;\n      margin-top: 0.4rem;\n      font-size: 26;\n      color: #444444;\n}\n.nameStyle {\n      font-size: 0.37333rem;\n      color:#B98080;\n}\n.timeStyle {\n      font-size: 0.26667rem;\n      color: #999999;\n}\n.rightStyle {\n      width: 2.66667rem;\n      height: 0.53333rem;\n      flex-direction: row;\n      margin-top: 0.66667rem;\n}\n.numberStyle {\n      font-size: 0.34667rem;\n      color: #bbbbbb;\n      margin-right: 0.26667rem;\n}\n.buttonStyle {\n      margin-right: 0.13333rem;\n      background-color: #41B883;\n}\n.bottomStyle {\n      margin-left: 1.6rem;\n\n      flex-direction: row;\n      margin-top: 20;\n}\n.bottomCommentStyle {\n      color: #999999;\n      font-size: 0.26667rem;\n}\n.bottomeTimeStyle {\n      color: #999999;\n      font-size: 0.26667rem;\n      margin-left:0.53333rem;\n}\n", ""]);
+exports.push([module.i, "\n.firstCell{\n    height: 10.66667rem;\n}\n.titleStyle{\n    height: 1.30667rem;\n    color: #222222;\n    font-size: 0.50667rem;\n    lines:2;\n    margin-left: 0.4rem;\n    margin-top: 0.53333rem;\n    margin-right: 0.4rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-line-clamp: 2;\n}\n.userInfoStyle{\n    height: 1.17333rem;\n}\n.topDiv1 {\n    flex-direction: row;\n    height: 1.17333rem;\n    justify-content:space-between;\n    align-items: center;\n    margin-top: 0.13333rem;\n}\n.headLeft1 {\n    flex-direction: row;\n    justify-content: space-between;\n    margin-left: 0.26667rem;\n}\n.headName1 {\n    height: 1.17333rem;\n    width: 2.13333rem;\n    justify-content: center;\n    align-content: center;\n    margin-left: 0.13333rem;\n}\n.nameStyle1{\n    font-size: 0.37333rem;\n    color:#B98080;\n}\n.timeStyle1{\n    font-size: 0.26667rem;\n    color: #999999;\n}\n.headImage1{\n    background-color: blue;\n    margin-left:0.13333rem;\n    border-radius: 44;\n}\n.rightButton{\n    width: 1.57333rem;\n    height: 0.74667rem;\n    font-size: 0.32rem;\n    background-color: #FB3C3C;\n    border-radius: 0.08rem;\n    text-align: center;\n    justify-content:center;\n    color: white;\n}\n.rightDivStyle{\n      justify-content: center;\n      align-items: center;\n      max-width: 1.57333rem;\n      height: 0.77333rem;   \n      margin-right: 0.4rem;\n}\n.contentTextStyle{\n      color: #666666;\n      font-size: 0.37333rem;\n      left: 0.4rem;\n      top: 0.4rem;\n      margin-right: 0.4rem;\n}\n.moneyStyle{\n      color: #ffae00;\n      font-size: 0.37333rem;\n      top: 0.66667rem;\n      left: 0.4rem;\n}\n.contentMoreImageStyle{\n      height: 2.02667rem;\n      top: 0.93333rem;\n      flex-direction: row;\n}\n.MoreImageCell{\n      width: 2.98667rem;\n      height: 2.02667rem;\n      background-color: saddlebrown;\n      border-radius: 0.10667rem;\n}\n.bottomDivStyle{\n      flex-direction: row;\n      justify-content: space-around;\n}\n.bottomButtonStyle{\n      background-color: saddlebrown;\n      top: 1.52rem;\n      width: 2.98667rem;\n      height: 1.04rem;\n      border-radius: 0.52rem;\n}\n.panel {\n    width: 10rem;\n    /* height: 264px; */\n    border-width: 1px;\n    border-style: solid;\n    border-color: #eeeeee;\n    background-color: white;\n}\n.text {\n    font-size: 0.66667rem;\n    text-align: center;\n    color: #41B883;\n}\n.topDiv {\n      flex-direction: row;\n      height: 1.2rem;\n      justify-content: space-between;\n}\n.headImage {\n      background-color: tomato;\n      margin-left:0.4rem;\n      margin-top: 0.26667rem;\n      border-radius: 35;\n}\n.headLeft {\n      flex-direction: row;\n      justify-content: space-around;\n      /* padding-top: 30px; */\n}\n.headName {\n      height: 1.2rem;\n      width: 2.13333rem;\n      /* justify-content: center; */\n      /* align-content: center; */\n      margin-left: 0.26667rem;\n      margin-top: 0.26667rem;\n}\n.contentText {\n      margin-left: 1.6rem;\n      margin-top: 0.4rem;\n      font-size: 26;\n      color: #444444;\n}\n.nameStyle {\n      font-size: 0.37333rem;\n      color:#B98080;\n}\n.timeStyle {\n      font-size: 0.26667rem;\n      color: #999999;\n}\n.rightStyle {\n      width: 2.66667rem;\n      height: 0.53333rem;\n      flex-direction: row;\n      margin-top: 0.66667rem;\n}\n.numberStyle {\n      font-size: 0.34667rem;\n      color: #bbbbbb;\n      margin-right: 0.26667rem;\n}\n.buttonStyle {\n      margin-right: 0.13333rem;\n      background-color: #41B883;\n}\n.bottomStyle {\n      margin-left: 1.6rem;\n\n      flex-direction: row;\n      margin-top: 20;\n}\n.bottomCommentStyle {\n      color: #999999;\n      font-size: 0.26667rem;\n}\n.bottomeTimeStyle {\n      color: #999999;\n      font-size: 0.26667rem;\n      margin-left:0.53333rem;\n}\n.cellContentStyle {\n      color: #444444;\n      font-size: 0.34667rem;\n      margin-top: 0.4rem;\n      margin-left: 1.6rem;\n}\n", ""]);
 
 // exports
 
@@ -656,7 +656,7 @@ exports.push([module.i, "\n.firstCell{\n    height: 10.66667rem;\n}\n.titleStyle
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 //
 //
@@ -898,14 +898,50 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
+var stream = weex.requireModule('stream');
+var POST_URL = 'http://192.168.50.251:18181/mobile/releaseConsultation/selectConsultationByTitle?publishMemberId=243&consultationType=2&consultationId=1770';
+var COMMENT_URL = 'http://192.168.50.251:18181/mobile/comment/selectAllComment?consultationId=1770';
 exports.default = {
-  data: function data() {
-    return {
-      zan: 'assets:zan',
-      lists: ['1', '2', '3', '4', '5', '6', '7']
-    };
-  }
+    data: function data() {
+        return {
+            zan: 'assets:zan',
+            lists: ['1', '2', '3', '4', '5', '6', '7'],
+            userInfo: {}
+        };
+    },
+    created: function created() {
+        var _this = this;
+
+        this.reloadData(POST_URL, function (res) {
+            _this.userInfo = res.data.data;
+            // console.log('信息数据'+JSON.stringify(this.userInfo));
+        });
+        this.reloadData(COMMENT_URL, function (res) {
+            _this.lists = res.data.data;
+            // console.log('评论数据'+JSON.stringify(this.lists));
+        });
+    },
+
+    methods: {
+        //网络请求
+        //加载数据
+        reloadData: function reloadData(url, callback) {
+            return stream.fetch({
+                method: 'POST',
+                url: url,
+                type: 'json'
+            }, callback);
+        }
+    }
+
 };
 
 /***/ }),
@@ -924,7 +960,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "weex-type": "text"
     }
-  }, [_vm._v("怎么样用手机拍出丁达尔光的效果怎么样用手机拍出丁达尔光的效果？")]), _vm._v(" "), _c('div', {
+  }, [_vm._v(_vm._s(_vm.userInfo.title))]), _vm._v(" "), _c('div', {
     staticClass: "topDiv1 weex-ct weex-div",
     attrs: {
       "weex-type": "div"
@@ -941,10 +977,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "height": "1.17333rem"
     },
     attrs: {
+      "src": _vm.userInfo.logo,
+      "data-img-src": _vm.userInfo.logo,
       "weex-type": "image"
     }
   }), _vm._v(" "), _c('div', {
-    staticClass: "headName weex-ct weex-div",
+    staticClass: "headName1 weex-ct weex-div",
     attrs: {
       "weex-type": "div"
     }
@@ -953,7 +991,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "weex-type": "text"
     }
-  }, [_vm._v("浅浅最爱笑")]), _vm._v(" "), _c('p', {
+  }, [_vm._v(_vm._s(_vm.userInfo.memberName))]), _vm._v(" "), _c('p', {
     staticClass: "timeStyle weex-el weex-text",
     attrs: {
       "weex-type": "text"
@@ -985,12 +1023,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "weex-type": "text"
     }
-  }, [_vm._v("给手机充电是我们每天必须要做的事情，也许你觉得拿起充电器随便冲一下就搞定了，@马云 真的是这样吗?其实不然，很多朋友的充电方式")]), _vm._v(" "), _c('p', {
+  }, [_vm._v(_vm._s(_vm.userInfo.contentList[0].content))]), _vm._v(" "), _c('p', {
     staticClass: "moneyStyle weex-el weex-text",
     attrs: {
       "weex-type": "text"
     }
-  }, [_vm._v("悬赏：4个长城币")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("悬赏：" + _vm._s(_vm.userInfo.reward) + "个长城币")]), _vm._v(" "), _c('div', {
     staticClass: "contentMoreImageStyle weex-ct weex-div",
     attrs: {
       "weex-type": "div"
@@ -1001,6 +1039,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "margin-left": "0.4rem"
     },
     attrs: {
+      "src": _vm.userInfo.imageUrl[0],
+      "data-img-src": _vm.userInfo.imageUrl[0],
       "weex-type": "image"
     }
   }), _vm._v(" "), _c('figure', {
@@ -1009,6 +1049,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "margin-left": "0.13333rem"
     },
     attrs: {
+      "src": _vm.userInfo.imageUrl[0],
+      "data-img-src": _vm.userInfo.imageUrl[0],
       "weex-type": "image"
     }
   }), _vm._v(" "), _c('figure', {
@@ -1017,6 +1059,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "margin-left": "0.13333rem"
     },
     attrs: {
+      "src": _vm.userInfo.imageUrl[0],
+      "data-img-src": _vm.userInfo.imageUrl[0],
       "weex-type": "image"
     }
   })]), _vm._v(" "), _c('div', {
@@ -1063,6 +1107,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "height": "0.93333rem"
       },
       attrs: {
+        "src": index.logo,
+        "data-img-src": index.logo,
         "weex-type": "image"
       }
     }), _vm._v(" "), _c('div', {
@@ -1075,7 +1121,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       attrs: {
         "weex-type": "text"
       }
-    }, [_vm._v("浅浅最爱笑")]), _vm._v(" "), _c('p', {
+    }, [_vm._v(_vm._s(index.memberName))]), _vm._v(" "), _c('p', {
       staticClass: "timeStyle weex-el weex-text",
       attrs: {
         "weex-type": "text"
@@ -1102,22 +1148,22 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       attrs: {
         "weex-type": "text"
       }
-    }, [_vm._v("999")]), _vm._v(" "), _c('p', {
+    }, [_vm._v(_vm._s(index.fabulousSum))]), _vm._v(" "), _c('p', {
       staticClass: "numberStyle weex-el weex-text",
       attrs: {
         "weex-type": "text"
       }
     }, [_vm._v("举报")])])]), _vm._v(" "), _c('div', {
-      staticClass: "contentText weex-ct weex-div",
+      staticClass: " weex-ct weex-div",
       attrs: {
         "weex-type": "div"
       }
     }, [_c('p', {
-      staticClass: " weex-el weex-text",
+      staticClass: "cellContentStyle weex-el weex-text",
       attrs: {
         "weex-type": "text"
       }
-    }, [_vm._v("这篇文章对我很有用，我希望有更多的优秀方法可以展示给大家，供大家学习")])]), _vm._v(" "), _c('div', {
+    }, [_vm._v(_vm._s(index.content))])]), _vm._v(" "), _c('div', {
       staticClass: "bottomStyle weex-ct weex-div",
       attrs: {
         "weex-type": "div"
@@ -1127,12 +1173,20 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       attrs: {
         "weex-type": "text"
       }
-    }, [_vm._v("324评论")]), _vm._v(" "), _c('p', {
+    }, [_vm._v(_vm._s(index.report) + "评论")]), _vm._v(" "), _c('p', {
       staticClass: "bottomeTimeStyle weex-el weex-text",
       attrs: {
         "weex-type": "text"
       }
-    }, [_vm._v("2012-12-12")])])])])
+    }, [_vm._v("2012-12-12")])]), _vm._v(" "), _c('div', {
+      staticClass: " weex-ct weex-div",
+      staticStyle: {
+        "height": "0.4rem"
+      },
+      attrs: {
+        "weex-type": "div"
+      }
+    })])])
   })], 2)
 },staticRenderFns: []}
 module.exports.render._withStripped = true

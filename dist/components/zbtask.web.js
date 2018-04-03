@@ -21082,7 +21082,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.item-container[data-v-079e0f6f] {\n  width: 10rem;\n  background-color: #f2f3f4;\n}\n.border-cell[data-v-079e0f6f] {\n  background-color: #f2f3f4;\n  width: 10rem;\n  height: 0.32rem;\n  align-items: center;\n  justify-content: center;\n  border-bottom-width: 1px;\n  border-style: solid;\n  border-color: #e0e0e0;\n}\n.cell[data-v-079e0f6f] {\n  background-color: #ffffff;\n}\n.content[data-v-079e0f6f]{\n  width:10rem;\n  height:1.70667rem;\n  border-bottom-width:1px;\n  align-items: center;\n  justify-content: center;\n}\n/* 文字内容布局 */\n.contextStyle[data-v-079e0f6f]{\n    font-size: 0.42667rem;\n    color: #222222;\n    margin-top: 0.4rem;\n    margin-left: 0.4rem;\n}\n/* cell底部信息布局 */\n.bottomTextStyle[data-v-079e0f6f]{\n    color: #838383;\n    font-size: 0.29333rem;\n    margin-left: 0.4rem;\n    margin-top: 0.4rem;\n}\n/* 单图 */\n.contentStyle[data-v-079e0f6f]{\n    width: 10rem;\n    height: 158;\n    border-bottom-width:1px;\n    border-bottom-color: #F2F2F3;\n}\n.contengImageCell[data-v-079e0f6f]{\n    width: 10rem;\n    height: 488;\n    border-bottom-width:1px;\n    border-bottom-color: #F2F2F3;\n}\n.contentImageStyle[data-v-079e0f6f]{\n    /* width: 750 - 60; */\n    height: 4rem;\n    margin-left: 0.4rem;\n    margin-top: 0.4rem;\n    margin-right: 0.4rem;\n    background-color: skyblue;\n}\n.contentMoreImageStyle[data-v-079e0f6f]{\n    height: 2.02667rem;\n    margin-top: 0.4rem;\n    flex-direction: row;\n}\n.contentMoreImageCell[data-v-079e0f6f]{\n    width: 10rem;\n    height: 4.45333rem;\n    border-bottom-width:1px;\n    border-bottom-color: #F2F2F3;\n}\n.MoreImageCell[data-v-079e0f6f]{\n    width: 2.98667rem;\n    height: 2.02667rem;\n    background-color: saddlebrown;\n}\n", ""]);
+exports.push([module.i, "\n.item-container[data-v-079e0f6f] {\n  width: 10rem;\n  background-color: #f2f3f4;\n}\n.border-cell[data-v-079e0f6f] {\n  background-color: #f2f3f4;\n  width: 10rem;\n  height: 0.32rem;\n  align-items: center;\n  justify-content: center;\n  border-bottom-width: 1px;\n  border-style: solid;\n  border-color: #e0e0e0;\n}\n.cell[data-v-079e0f6f] {\n  background-color: #ffffff;\n}\n.content[data-v-079e0f6f]{\n  width:10rem;\n  height:1.70667rem;\n  border-bottom-width:1px;\n  align-items: center;\n  justify-content: center;\n}\n/* 文字内容布局 */\n.contextStyle[data-v-079e0f6f]{\n    font-size: 0.42667rem;\n    color: #222222;\n    margin-top: 0.4rem;\n    margin-left: 0.4rem;\n}\n/* cell底部信息布局 */\n.bottomTextStyle[data-v-079e0f6f]{\n    color: #838383;\n    font-size: 0.29333rem;\n    margin-left: 0.4rem;\n    margin-top: 0.4rem;\n}\n/* 单图 */\n.contentStyle[data-v-079e0f6f]{\n    width: 10rem;\n    height: 158;\n    border-bottom-width:1px;\n    border-bottom-color: #F2F2F3;\n}\n.contengImageCell[data-v-079e0f6f]{\n    width: 10rem;\n    height: 488;\n    border-bottom-width:1px;\n    border-bottom-color: #F2F2F3;\n}\n.contentImageStyle[data-v-079e0f6f]{\n    /* width: 750 - 60; */\n    height: 4rem;\n    margin-left: 0.4rem;\n    margin-top: 0.4rem;\n    margin-right: 0.4rem;\n    /* background-color: skyblue; */\n}\n.contentMoreImageStyle[data-v-079e0f6f]{\n    height: 2.02667rem;\n    margin-top: 0.4rem;\n    flex-direction: row;\n}\n.contentMoreImageCell[data-v-079e0f6f]{\n    width: 10rem;\n    height: 4.45333rem;\n    border-bottom-width:1px;\n    border-bottom-color: #F2F2F3;\n}\n.MoreImageCell[data-v-079e0f6f]{\n    width: 2.98667rem;\n    height: 2.02667rem;\n    background-color: saddlebrown;\n}\n", ""]);
 
 // exports
 
@@ -21234,8 +21234,13 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 //
 //
 //
+//
 
 var dom = weex.requireModule('dom');
+
+var stream = weex.requireModule('stream');
+var POST_URL = 'http://192.168.50.251:18181/mobile/releaseConsultation/selectConsultationListByColumn?columnId=2&consultationType=1';
+
 exports.default = {
   components: { WxcTabPage: _weexUi.WxcTabPage, WxcPanItem: _weexUi.WxcPanItem },
   data: function data() {
@@ -21243,14 +21248,20 @@ exports.default = {
       tabTitles: _config2.default.tabTitles,
       tabStyles: _config2.default.tabStyles,
       tabList: [],
-      demoList: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      demoList: [9, 2, 3, 4],
       tabPageHeight: 1334
     };
   },
   created: function created() {
+    var _this = this;
+
     this.tabPageHeight = _weexUi.Utils.env.getPageHeight();
     this.tabList = [].concat(_toConsumableArray(Array(this.tabTitles.length).keys())).map(function (i) {
       return [];
+    });
+    this.reloadData(POST_URL, function (res) {
+      _this.demoList = res.data.data;
+      Vue.set(_this.tabList, 0, res.data.data);
     });
     Vue.set(this.tabList, 0, this.demoList);
   },
@@ -21276,6 +21287,16 @@ exports.default = {
     wxcPanItemClicked: function wxcPanItemClicked(e) {
       console.log("123" + e);
       weex.requireModule("showLoading").pushCustModuleVC({ "VC": "8" });
+    },
+
+    //网络请求
+    //加载数据
+    reloadData: function reloadData(url, callback) {
+      return stream.fetch({
+        method: 'POST',
+        url: url,
+        type: 'json'
+      }, callback);
     }
   }
 };
@@ -38783,7 +38804,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
           "wxcPanItemClicked": _vm.wxcPanItemClicked,
           "wxcPanItemPan": _vm.wxcPanItemPan
         }
-      }, [(dicModel === 2 ? true : false) ? _c('div', {
+      }, [(dicModel.modelType == 0 ? true : false) ? _c('div', {
         staticClass: "contentStyle weex-ct weex-div",
         attrs: {
           "weex-type": "div"
@@ -38793,12 +38814,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         attrs: {
           "weex-type": "text"
         }
-      }, [_vm._v("手机每天充电，一定要记得避开这4大误区1")]), _vm._v(" "), _c('p', {
+      }, [_vm._v(_vm._s(dicModel.title))]), _vm._v(" "), _c('p', {
         staticClass: "bottomTextStyle weex-el weex-text",
         attrs: {
           "weex-type": "text"
         }
-      }, [_vm._v("泡芙小姐   869评论   1小时前")])]) : _vm._e()]), _vm._v(" "), (dicModel === 2 ? true : false) ? _c('div', {
+      }, [_vm._v(_vm._s(dicModel.memberName) + "   " + _vm._s(dicModel.business) + "评论   五天前")])]) : _vm._e()]), _vm._v(" "), (dicModel.modelType == 1 ? true : false) ? _c('div', {
         staticClass: "contengImageCell weex-ct weex-div",
         attrs: {
           "weex-type": "div"
@@ -38808,11 +38829,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         attrs: {
           "weex-type": "text"
         }
-      }, [_vm._v("手机每天充电，一定要记得避开这4大误区2")]), _vm._v(" "), _c('figure', {
+      }, [_vm._v(_vm._s(dicModel.title))]), _vm._v(" "), _c('figure', {
         staticClass: "contentImageStyle weex-el weex-image",
         attrs: {
-          "src": 'assets:zan',
-          "data-img-src": 'assets:zan',
+          "src": dicModel.imageUrl ? dicModel.imageUrl[0] : dicModel.imgUrl,
+          "data-img-src": dicModel.imageUrl ? dicModel.imageUrl[0] : dicModel.imgUrl,
           "weex-type": "image"
         }
       }), _vm._v(" "), _c('p', {
@@ -38820,7 +38841,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         attrs: {
           "weex-type": "text"
         }
-      }, [_vm._v("泡芙小姐   869评论   1小时前")])]) : _vm._e(), _vm._v(" "), (dicModel === 2 ? true : false) ? _c('div', {
+      }, [_vm._v(_vm._s(dicModel.memberName) + "   " + _vm._s(dicModel.business) + "评论   五天前")])]) : _vm._e(), _vm._v(" "), (dicModel.modelType == 3 ? true : false) ? _c('div', {
         staticClass: "contentMoreImageCell weex-ct weex-div",
         attrs: {
           "weex-type": "div"
@@ -38830,7 +38851,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         attrs: {
           "weex-type": "text"
         }
-      }, [_vm._v("手机每天充电，一定要记得避开这4大误区3")]), _vm._v(" "), _c('div', {
+      }, [_vm._v(_vm._s(dicModel.title))]), _vm._v(" "), _c('div', {
         staticClass: "contentMoreImageStyle weex-ct weex-div",
         attrs: {
           "weex-type": "div"
@@ -38841,6 +38862,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
           "margin-left": "0.4rem"
         },
         attrs: {
+          "src": dicModel.imageUrl ? dicModel.imageUrl[0] : dicModel.imgUrl,
+          "data-img-src": dicModel.imageUrl ? dicModel.imageUrl[0] : dicModel.imgUrl,
           "weex-type": "image"
         }
       }), _vm._v(" "), _c('figure', {
@@ -38849,6 +38872,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
           "margin-left": "0.13333rem"
         },
         attrs: {
+          "src": dicModel.imageUrl ? dicModel.imageUrl[1] : dicModel.imgUrl,
+          "data-img-src": dicModel.imageUrl ? dicModel.imageUrl[1] : dicModel.imgUrl,
           "weex-type": "image"
         }
       }), _vm._v(" "), _c('figure', {
@@ -38857,6 +38882,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
           "margin-left": "0.13333rem"
         },
         attrs: {
+          "src": dicModel.imageUrl ? dicModel.imageUrl[2] : dicModel.imgUrl,
+          "data-img-src": dicModel.imageUrl ? dicModel.imageUrl[2] : dicModel.imgUrl,
           "weex-type": "image"
         }
       })]), _vm._v(" "), _c('p', {
@@ -38864,7 +38891,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         attrs: {
           "weex-type": "text"
         }
-      }, [_vm._v("泡芙小姐   869评论   1小时前")])]) : _vm._e()], 1)
+      }, [_vm._v(_vm._s(dicModel.memberName) + "   " + _vm._s(dicModel.business) + "评论   五天前")])]) : _vm._e()], 1)
     })], 2)
   }))
 },staticRenderFns: []}

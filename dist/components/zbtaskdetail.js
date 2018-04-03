@@ -138,19 +138,19 @@ module.exports = {
     "height": "88",
     "justifyContent": "space-between",
     "alignItems": "center",
-    "marginTop": "30"
+    "marginTop": "10"
   },
   "headLeft1": {
     "flexDirection": "row",
-    "justifyContent": "space-around",
-    "marginLeft": "30"
+    "justifyContent": "space-between",
+    "marginLeft": "20"
   },
   "headName1": {
     "height": "88",
     "width": "160",
     "justifyContent": "center",
     "alignContent": "center",
-    "marginLeft": "20"
+    "marginLeft": "10"
   },
   "nameStyle1": {
     "fontSize": "28",
@@ -162,7 +162,7 @@ module.exports = {
   },
   "headImage1": {
     "backgroundColor": "#0000FF",
-    "marginLeft": "30",
+    "marginLeft": "10",
     "borderRadius": 44
   },
   "rightButton": {
@@ -192,18 +192,19 @@ module.exports = {
   "moneyStyle": {
     "color": "#ffae00",
     "fontSize": "28",
-    "top": "30",
+    "top": "50",
     "left": "30"
   },
   "contentMoreImageStyle": {
     "height": "152",
-    "top": "50",
+    "top": "70",
     "flexDirection": "row"
   },
   "MoreImageCell": {
     "width": "224",
     "height": "152",
-    "backgroundColor": "#8B4513"
+    "backgroundColor": "#8B4513",
+    "borderRadius": "8"
   },
   "bottomDivStyle": {
     "flexDirection": "row",
@@ -211,14 +212,13 @@ module.exports = {
   },
   "bottomButtonStyle": {
     "backgroundColor": "#8B4513",
-    "top": "94",
+    "top": "114",
     "width": "224",
     "height": "78",
     "borderRadius": "39"
   },
   "panel": {
     "width": "750",
-    "height": "264",
     "borderWidth": "1",
     "borderStyle": "solid",
     "borderColor": "#eeeeee",
@@ -237,7 +237,7 @@ module.exports = {
   "headImage": {
     "backgroundColor": "#FF6347",
     "marginLeft": "30",
-    "marginTop": "30",
+    "marginTop": "20",
     "borderRadius": 35
   },
   "headLeft": {
@@ -247,8 +247,6 @@ module.exports = {
   "headName": {
     "height": "90",
     "width": "160",
-    "justifyContent": "center",
-    "alignContent": "center",
     "marginLeft": "20",
     "marginTop": "20"
   },
@@ -294,6 +292,12 @@ module.exports = {
     "color": "#999999",
     "fontSize": "20",
     "marginLeft": "40"
+  },
+  "cellContentStyle": {
+    "color": "#444444",
+    "fontSize": "26",
+    "marginTop": "30",
+    "marginLeft": "120"
   }
 }
 
@@ -306,7 +310,7 @@ module.exports = {
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 //
 //
@@ -548,14 +552,50 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
+var stream = weex.requireModule('stream');
+var POST_URL = 'http://192.168.50.251:18181/mobile/releaseConsultation/selectConsultationByTitle?publishMemberId=243&consultationType=2&consultationId=1770';
+var COMMENT_URL = 'http://192.168.50.251:18181/mobile/comment/selectAllComment?consultationId=1770';
 exports.default = {
-  data: function data() {
-    return {
-      zan: 'assets:zan',
-      lists: ['1', '2', '3', '4', '5', '6', '7']
-    };
-  }
+    data: function data() {
+        return {
+            zan: 'assets:zan',
+            lists: ['1', '2', '3', '4', '5', '6', '7'],
+            userInfo: {}
+        };
+    },
+    created: function created() {
+        var _this = this;
+
+        this.reloadData(POST_URL, function (res) {
+            _this.userInfo = res.data.data;
+            // console.log('信息数据'+JSON.stringify(this.userInfo));
+        });
+        this.reloadData(COMMENT_URL, function (res) {
+            _this.lists = res.data.data;
+            // console.log('评论数据'+JSON.stringify(this.lists));
+        });
+    },
+
+    methods: {
+        //网络请求
+        //加载数据
+        reloadData: function reloadData(url, callback) {
+            return stream.fetch({
+                method: 'POST',
+                url: url,
+                type: 'json'
+            }, callback);
+        }
+    }
+
 };
 
 /***/ }),
@@ -564,7 +604,64 @@ exports.default = {
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('list', [_vm._m(0), _vm._l((_vm.lists), function(index) {
+  return _c('list', [_c('cell', {
+    staticClass: ["firstCell"],
+    appendAsTree: true,
+    attrs: {
+      "append": "tree"
+    }
+  }, [_c('text', {
+    staticClass: ["titleStyle"]
+  }, [_vm._v(_vm._s(_vm.userInfo.title))]), _c('div', {
+    staticClass: ["topDiv1"]
+  }, [_c('div', {
+    staticClass: ["headLeft1"]
+  }, [_c('image', {
+    staticClass: ["headImage1"],
+    staticStyle: {
+      width: "88px",
+      height: "88px"
+    },
+    attrs: {
+      "src": _vm.userInfo.logo
+    }
+  }), _c('div', {
+    staticClass: ["headName1"]
+  }, [_c('text', {
+    staticClass: ["nameStyle"]
+  }, [_vm._v(_vm._s(_vm.userInfo.memberName))]), _c('text', {
+    staticClass: ["timeStyle"]
+  }, [_vm._v("22小时前")])])]), _vm._m(0)]), _c('text', {
+    staticClass: ["contentTextStyle"]
+  }, [_vm._v(_vm._s(_vm.userInfo.contentList[0].content))]), _c('text', {
+    staticClass: ["moneyStyle"]
+  }, [_vm._v("悬赏：" + _vm._s(_vm.userInfo.reward) + "个长城币")]), _c('div', {
+    staticClass: ["contentMoreImageStyle"]
+  }, [_c('image', {
+    staticClass: ["MoreImageCell"],
+    staticStyle: {
+      marginLeft: "30px"
+    },
+    attrs: {
+      "src": _vm.userInfo.imageUrl[0]
+    }
+  }), _c('image', {
+    staticClass: ["MoreImageCell"],
+    staticStyle: {
+      marginLeft: "10px"
+    },
+    attrs: {
+      "src": _vm.userInfo.imageUrl[0]
+    }
+  }), _c('image', {
+    staticClass: ["MoreImageCell"],
+    staticStyle: {
+      marginLeft: "10px"
+    },
+    attrs: {
+      "src": _vm.userInfo.imageUrl[0]
+    }
+  })]), _vm._m(1)]), _vm._l((_vm.lists), function(index) {
     return _c('cell', {
       key: index,
       appendAsTree: true,
@@ -575,7 +672,24 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       staticClass: ["panel"]
     }, [_c('div', {
       staticClass: ["topDiv"]
-    }, [_vm._m(1, true), _c('div', {
+    }, [_c('div', {
+      staticClass: ["headLeft"]
+    }, [_c('image', {
+      staticClass: ["headImage"],
+      staticStyle: {
+        width: "70px",
+        height: "70px"
+      },
+      attrs: {
+        "src": index.logo
+      }
+    }), _c('div', {
+      staticClass: ["headName"]
+    }, [_c('text', {
+      staticClass: ["nameStyle"]
+    }, [_vm._v(_vm._s(index.memberName))]), _c('text', {
+      staticClass: ["timeStyle"]
+    }, [_vm._v("22小时前")])])]), _c('div', {
       staticClass: ["rightStyle"]
     }, [_c('image', {
       staticStyle: {
@@ -588,36 +702,24 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }
     }), _c('text', {
       staticClass: ["numberStyle"]
-    }, [_vm._v("999")]), _c('text', {
+    }, [_vm._v(_vm._s(index.fabulousSum))]), _c('text', {
       staticClass: ["numberStyle"]
-    }, [_vm._v("举报")])])]), _vm._m(2, true), _vm._m(3, true)])])
+    }, [_vm._v("举报")])])]), _c('div', [_c('text', {
+      staticClass: ["cellContentStyle"]
+    }, [_vm._v(_vm._s(index.content))])]), _c('div', {
+      staticClass: ["bottomStyle"]
+    }, [_c('text', {
+      staticClass: ["bottomCommentStyle"]
+    }, [_vm._v(_vm._s(index.report) + "评论")]), _c('text', {
+      staticClass: ["bottomeTimeStyle"]
+    }, [_vm._v("2012-12-12")])]), _c('div', {
+      staticStyle: {
+        height: "30px"
+      }
+    })])])
   })], 2)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('cell', {
-    staticClass: ["firstCell"],
-    appendAsTree: true,
-    attrs: {
-      "append": "tree"
-    }
-  }, [_c('text', {
-    staticClass: ["titleStyle"]
-  }, [_vm._v("怎么样用手机拍出丁达尔光的效果怎么样用手机拍出丁达尔光的效果？")]), _c('div', {
-    staticClass: ["topDiv1"]
-  }, [_c('div', {
-    staticClass: ["headLeft1"]
-  }, [_c('image', {
-    staticClass: ["headImage1"],
-    staticStyle: {
-      width: "88px",
-      height: "88px"
-    }
-  }), _c('div', {
-    staticClass: ["headName"]
-  }, [_c('text', {
-    staticClass: ["nameStyle"]
-  }, [_vm._v("浅浅最爱笑")]), _c('text', {
-    staticClass: ["timeStyle"]
-  }, [_vm._v("22小时前")])])]), _c('div', {
+  return _c('div', {
     staticClass: ["rightDivStyle"]
   }, [_c('text', {
     staticStyle: {
@@ -630,62 +732,15 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       justifyContent: "center",
       color: "white"
     }
-  }, [_vm._v("关注")])])]), _c('text', {
-    staticClass: ["contentTextStyle"]
-  }, [_vm._v("给手机充电是我们每天必须要做的事情，也许你觉得拿起充电器随便冲一下就搞定了，@马云 真的是这样吗?其实不然，很多朋友的充电方式")]), _c('text', {
-    staticClass: ["moneyStyle"]
-  }, [_vm._v("悬赏：4个长城币")]), _c('div', {
-    staticClass: ["contentMoreImageStyle"]
-  }, [_c('image', {
-    staticClass: ["MoreImageCell"],
-    staticStyle: {
-      marginLeft: "30px"
-    }
-  }), _c('image', {
-    staticClass: ["MoreImageCell"],
-    staticStyle: {
-      marginLeft: "10px"
-    }
-  }), _c('image', {
-    staticClass: ["MoreImageCell"],
-    staticStyle: {
-      marginLeft: "10px"
-    }
-  })]), _c('div', {
+  }, [_vm._v("关注")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
     staticClass: ["bottomDivStyle"]
   }, [_c('image', {
     staticClass: ["bottomButtonStyle"]
   }), _c('image', {
     staticClass: ["bottomButtonStyle"]
-  })])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: ["headLeft"]
-  }, [_c('image', {
-    staticClass: ["headImage"],
-    staticStyle: {
-      width: "70px",
-      height: "70px"
-    }
-  }), _c('div', {
-    staticClass: ["headName"]
-  }, [_c('text', {
-    staticClass: ["nameStyle"]
-  }, [_vm._v("浅浅最爱笑")]), _c('text', {
-    staticClass: ["timeStyle"]
-  }, [_vm._v("22小时前")])])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: ["contentText"]
-  }, [_c('text', [_vm._v("这篇文章对我很有用，我希望有更多的优秀方法可以展示给大家，供大家学习")])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: ["bottomStyle"]
-  }, [_c('text', {
-    staticClass: ["bottomCommentStyle"]
-  }, [_vm._v("324评论")]), _c('text', {
-    staticClass: ["bottomeTimeStyle"]
-  }, [_vm._v("2012-12-12")])])
+  })])
 }]}
 module.exports.render._withStripped = true
 
