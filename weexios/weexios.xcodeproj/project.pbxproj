@@ -17,6 +17,14 @@
 		2A18C40A206CD334000B9714 /* CellDemoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A18C408206CD334000B9714 /* CellDemoTableViewCell.m */; };
 		2A18C40B206CD334000B9714 /* CellDemoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A18C409206CD334000B9714 /* CellDemoTableViewCell.xib */; };
 		2A18C40E206CD3D6000B9714 /* CellDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A18C40D206CD3D6000B9714 /* CellDemo.m */; };
+		2A2CFD7C2074667100383A1F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2CFD7B2074667100383A1F /* HomeViewController.m */; };
+		2A2CFD7F2074668000383A1F /* IssueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2CFD7E2074668000383A1F /* IssueViewController.m */; };
+		2A2CFD822074668A00383A1F /* LiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2CFD812074668A00383A1F /* LiveViewController.m */; };
+		2A2CFD852074669500383A1F /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2CFD842074669500383A1F /* MineViewController.m */; };
+		2A2CFD88207466A000383A1F /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2CFD87207466A000383A1F /* PersonViewController.m */; };
+		2A2CFD8B207466F500383A1F /* WXTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2CFD8A207466F500383A1F /* WXTabBar.m */; };
+		2A2CFD8F2074688A00383A1F /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2CFD8E2074688A00383A1F /* UIView+Layout.m */; };
+		2A2CFD952074693300383A1F /* WXTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2CFD942074693300383A1F /* WXTabBarViewController.m */; };
 		2A33642E206DD91D008B2F2D /* WXLoaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A33642D206DD91D008B2F2D /* WXLoaderOperation.m */; };
 		2A64B7FA2071C7D5009DB2EE /* ZBTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A64B7F92071C7D5009DB2EE /* ZBTaskViewController.m */; };
 		2A64B829207205C7009DB2EE /* ZBTaskDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A64B828207205C7009DB2EE /* ZBTaskDetailViewController.m */; };
@@ -92,6 +100,22 @@
 		2A18C409206CD334000B9714 /* CellDemoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellDemoTableViewCell.xib; sourceTree = "<group>"; };
 		2A18C40C206CD3D6000B9714 /* CellDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellDemo.h; sourceTree = "<group>"; };
 		2A18C40D206CD3D6000B9714 /* CellDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellDemo.m; sourceTree = "<group>"; };
+		2A2CFD7A2074667100383A1F /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		2A2CFD7B2074667100383A1F /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		2A2CFD7D2074668000383A1F /* IssueViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IssueViewController.h; sourceTree = "<group>"; };
+		2A2CFD7E2074668000383A1F /* IssueViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IssueViewController.m; sourceTree = "<group>"; };
+		2A2CFD802074668A00383A1F /* LiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveViewController.h; sourceTree = "<group>"; };
+		2A2CFD812074668A00383A1F /* LiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveViewController.m; sourceTree = "<group>"; };
+		2A2CFD832074669500383A1F /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		2A2CFD842074669500383A1F /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		2A2CFD86207466A000383A1F /* PersonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
+		2A2CFD87207466A000383A1F /* PersonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonViewController.m; sourceTree = "<group>"; };
+		2A2CFD89207466F500383A1F /* WXTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXTabBar.h; sourceTree = "<group>"; };
+		2A2CFD8A207466F500383A1F /* WXTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXTabBar.m; sourceTree = "<group>"; };
+		2A2CFD8D2074688A00383A1F /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		2A2CFD8E2074688A00383A1F /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		2A2CFD932074693300383A1F /* WXTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXTabBarViewController.h; sourceTree = "<group>"; };
+		2A2CFD942074693300383A1F /* WXTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXTabBarViewController.m; sourceTree = "<group>"; };
 		2A33642C206DD91D008B2F2D /* WXLoaderOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXLoaderOperation.h; sourceTree = "<group>"; };
 		2A33642D206DD91D008B2F2D /* WXLoaderOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXLoaderOperation.m; sourceTree = "<group>"; };
 		2A64B7F82071C7D5009DB2EE /* ZBTaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBTaskViewController.h; sourceTree = "<group>"; };
@@ -205,6 +229,86 @@
 			path = Demo;
 			sourceTree = "<group>";
 		};
+		2A2CFD73207465CD00383A1F /* main */ = {
+			isa = PBXGroup;
+			children = (
+				2A2CFD8C2074687C00383A1F /* tools */,
+				2A2CFD792074664A00383A1F /* tabbar */,
+				2A2CFD762074662400383A1F /* home */,
+				2A2CFD772074662400383A1F /* issue */,
+				2A2CFD752074662400383A1F /* live */,
+				2A2CFD742074662400383A1F /* mine */,
+				2A2CFD782074662400383A1F /* person */,
+			);
+			name = main;
+			path = weexios/main;
+			sourceTree = SOURCE_ROOT;
+		};
+		2A2CFD742074662400383A1F /* mine */ = {
+			isa = PBXGroup;
+			children = (
+				2A2CFD832074669500383A1F /* MineViewController.h */,
+				2A2CFD842074669500383A1F /* MineViewController.m */,
+			);
+			path = mine;
+			sourceTree = "<group>";
+		};
+		2A2CFD752074662400383A1F /* live */ = {
+			isa = PBXGroup;
+			children = (
+				2A2CFD802074668A00383A1F /* LiveViewController.h */,
+				2A2CFD812074668A00383A1F /* LiveViewController.m */,
+			);
+			path = live;
+			sourceTree = "<group>";
+		};
+		2A2CFD762074662400383A1F /* home */ = {
+			isa = PBXGroup;
+			children = (
+				2A2CFD7A2074667100383A1F /* HomeViewController.h */,
+				2A2CFD7B2074667100383A1F /* HomeViewController.m */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		2A2CFD772074662400383A1F /* issue */ = {
+			isa = PBXGroup;
+			children = (
+				2A2CFD7D2074668000383A1F /* IssueViewController.h */,
+				2A2CFD7E2074668000383A1F /* IssueViewController.m */,
+			);
+			path = issue;
+			sourceTree = "<group>";
+		};
+		2A2CFD782074662400383A1F /* person */ = {
+			isa = PBXGroup;
+			children = (
+				2A2CFD86207466A000383A1F /* PersonViewController.h */,
+				2A2CFD87207466A000383A1F /* PersonViewController.m */,
+			);
+			path = person;
+			sourceTree = "<group>";
+		};
+		2A2CFD792074664A00383A1F /* tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				2A2CFD89207466F500383A1F /* WXTabBar.h */,
+				2A2CFD8A207466F500383A1F /* WXTabBar.m */,
+				2A2CFD932074693300383A1F /* WXTabBarViewController.h */,
+				2A2CFD942074693300383A1F /* WXTabBarViewController.m */,
+			);
+			path = tabbar;
+			sourceTree = "<group>";
+		};
+		2A2CFD8C2074687C00383A1F /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				2A2CFD8D2074688A00383A1F /* UIView+Layout.h */,
+				2A2CFD8E2074688A00383A1F /* UIView+Layout.m */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
 		2A64B82A20721901009DB2EE /* dist */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +377,7 @@
 				2A086248206E4217007E3886 /* ListContentDetail */,
 				2A18C406206CD31B000B9714 /* Demo */,
 				2AE2A036206B85E60042FDA4 /* weex */,
+				2A2CFD73207465CD00383A1F /* main */,
 				2AE2A001206B82A50042FDA4 /* AppDelegate.h */,
 				2AE2A002206B82A50042FDA4 /* AppDelegate.m */,
 				2AE2A004206B82A50042FDA4 /* ViewController.h */,
@@ -564,23 +669,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A2CFD8B207466F500383A1F /* WXTabBar.m in Sources */,
 				2A64B7FA2071C7D5009DB2EE /* ZBTaskViewController.m in Sources */,
 				2A086295206E44CC007E3886 /* ZYDemoImageViewController.m in Sources */,
+				2A2CFD8F2074688A00383A1F /* UIView+Layout.m in Sources */,
 				2AE2A035206B85240042FDA4 /* WeexMainViewController.m in Sources */,
+				2A2CFD952074693300383A1F /* WXTabBarViewController.m in Sources */,
 				2AE2A03B206B85E60042FDA4 /* imageHelper.m in Sources */,
 				2A18C40E206CD3D6000B9714 /* CellDemo.m in Sources */,
+				2A2CFD852074669500383A1F /* MineViewController.m in Sources */,
 				2A18C358206B9450000B9714 /* WXCustMoudelViewController.m in Sources */,
+				2A2CFD822074668A00383A1F /* LiveViewController.m in Sources */,
 				2AE2A03C206B85E60042FDA4 /* showLoadingView.m in Sources */,
 				2A08624E206E423B007E3886 /* ZYDemoViewController.m in Sources */,
 				2A08624B206E422F007E3886 /* LFYDemoViewController.m in Sources */,
 				2A18C40A206CD334000B9714 /* CellDemoTableViewCell.m in Sources */,
 				2AE2A006206B82A50042FDA4 /* ViewController.m in Sources */,
 				2AE2A011206B82A50042FDA4 /* main.m in Sources */,
+				2A2CFD7F2074668000383A1F /* IssueViewController.m in Sources */,
 				2A18C3D9206CB669000B9714 /* CellDemoViewController.m in Sources */,
 				2A18C355206B93B9000B9714 /* BaseViewController.m in Sources */,
 				2A8F9A91206CDCD600BD9828 /* ComponentCellViewController.m in Sources */,
 				2AE2A003206B82A50042FDA4 /* AppDelegate.m in Sources */,
+				2A2CFD88207466A000383A1F /* PersonViewController.m in Sources */,
 				2A64B829207205C7009DB2EE /* ZBTaskDetailViewController.m in Sources */,
+				2A2CFD7C2074667100383A1F /* HomeViewController.m in Sources */,
 				2A33642E206DD91D008B2F2D /* WXLoaderOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

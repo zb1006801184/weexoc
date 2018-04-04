@@ -197,7 +197,7 @@
   .contentText {
       margin-left: 120px;
       margin-top: 30px;
-      font-size: 26;
+      font-size: 26px;
       color: #444444;
   }
   .nameStyle {
@@ -227,7 +227,7 @@
       margin-left: 120px;
 
       flex-direction: row;
-      margin-top: 20;
+      margin-top: 20px;
   }
   .bottomCommentStyle {
       color: #999999;

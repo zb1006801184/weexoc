@@ -253,7 +253,7 @@ module.exports = {
   "contentText": {
     "marginLeft": "120",
     "marginTop": "30",
-    "fontSize": 26,
+    "fontSize": "26",
     "color": "#444444"
   },
   "nameStyle": {
@@ -282,7 +282,7 @@ module.exports = {
   "bottomStyle": {
     "marginLeft": "120",
     "flexDirection": "row",
-    "marginTop": 20
+    "marginTop": "20"
   },
   "bottomCommentStyle": {
     "color": "#999999",

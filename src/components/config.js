@@ -1,3 +1,6 @@
+
+var stream = weex.requireModule('stream');
+
 export default {
     tabTitles: [
       {
@@ -72,5 +75,25 @@ export default {
       iconFontMarginBottom: 8,
       activeIconFontColor: 'red',
       iconFontUrl: '//at.alicdn.com/t/font_501019_mauqv15evc1pp66r.ttf'
-    }
+    },
+  //网络请求
+        wxReloadData(url, params,callback) {
+          return stream.fetch({
+            method: 'POST',
+            url: url,
+            type: 'json',
+            body:this.toParams(params)
+            }, callback);
+        },
+    //拼接地址
+        toParams(obj) {
+          var param = ""
+          for(const name in obj) {
+              if(typeof obj[name] != 'function') {
+                  param += "&" + name + "=" + encodeURI(obj[name])
+              }
+          }
+          return param.substring(1)
+        }
+  
   }

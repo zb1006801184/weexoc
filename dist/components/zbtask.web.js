@@ -21239,7 +21239,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 var dom = weex.requireModule('dom');
 
 var stream = weex.requireModule('stream');
-var POST_URL = 'http://192.168.50.251:18181/mobile/releaseConsultation/selectConsultationListByColumn?columnId=2&consultationType=1';
+var POST_URL = 'http://192.168.50.251:18181/mobile/releaseConsultation/selectConsultationListByColumn';
 
 exports.default = {
   components: { WxcTabPage: _weexUi.WxcTabPage, WxcPanItem: _weexUi.WxcPanItem },
@@ -21259,13 +21259,12 @@ exports.default = {
     this.tabList = [].concat(_toConsumableArray(Array(this.tabTitles.length).keys())).map(function (i) {
       return [];
     });
-    this.reloadData(POST_URL, function (res) {
+    _config2.default.wxReloadData(POST_URL, { "columnId": "2", "consultationType": "1" }, function (res) {
       _this.demoList = res.data.data;
       Vue.set(_this.tabList, 0, res.data.data);
     });
     Vue.set(this.tabList, 0, this.demoList);
   },
-
   methods: {
     wxcTabPageCurrentTabSelected: function wxcTabPageCurrentTabSelected(e) {
       var self = this;
@@ -30892,7 +30891,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }) : _vm._e(), _vm._v(" "), _c('p', {
     staticClass: "noticebar-content weex-el weex-text",
     style: ({
-      width: _vm._px2rem(_vm.contentWidth + 'px', 75),
+      width: _vm._px2rem(_vm._px2rem(_vm.contentWidth + 'px', 75), 75),
       webkitLineClamp: _vm.lines,
       overflow: 'hidden',
       textOverflow: 'ellipsis'
@@ -33831,7 +33830,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }), _vm._v(" "), _c('p', {
     staticClass: "u-txt weex-el weex-text",
     style: ({
-      width: _vm._px2rem((_vm.textWidth + "px"), 75)
+      width: _vm._px2rem(_vm._px2rem((_vm.textWidth + "px"), 75), 75)
     }),
     attrs: {
       "weex-type": "text"
@@ -37763,7 +37762,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       staticClass: "icon-font weex-el weex-text",
       style: ({
         fontFamily: 'wxcIconFont',
-        fontSize: _vm._px2rem(_vm.tabStyles.iconFontSize + 'px', 75),
+        fontSize: _vm._px2rem(_vm._px2rem(_vm.tabStyles.iconFontSize + 'px', 75), 75),
         color: _vm.currentPage === index ? _vm.tabStyles.activeIconFontColor : _vm.tabStyles.iconFontColor
       }),
       attrs: {
@@ -37772,11 +37771,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }, [_vm._v(_vm._s(v.codePoint))]) : _vm._e(), _vm._v(" "), (!_vm.titleUseSlot) ? _c('p', {
       staticClass: "tab-text weex-el weex-text",
       style: ({
-        fontSize: _vm._px2rem(_vm.tabStyles.fontSize + 'px', 75),
+        fontSize: _vm._px2rem(_vm._px2rem(_vm.tabStyles.fontSize + 'px', 75), 75),
         fontWeight: _vm.currentPage === index && _vm.tabStyles.isActiveTitleBold ? 'bold' : 'normal',
         color: _vm.currentPage === index ? _vm.tabStyles.activeTitleColor : _vm.tabStyles.titleColor,
-        paddingLeft: _vm._px2rem(_vm.tabStyles.textPaddingLeft + 'px', 75),
-        paddingRight: _vm._px2rem(_vm.tabStyles.textPaddingRight + 'px', 75)
+        paddingLeft: _vm._px2rem(_vm._px2rem(_vm.tabStyles.textPaddingLeft + 'px', 75), 75),
+        paddingRight: _vm._px2rem(_vm._px2rem(_vm.tabStyles.textPaddingRight + 'px', 75), 75)
       }),
       attrs: {
         "weex-type": "text"
@@ -38281,8 +38280,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       staticClass: " weex-el weex-text",
       style: ({
         fontFamily: 'wxcIconFont',
-        fontSize: _vm._px2rem(_vm.tabStyles.iconFontSize + 'px', 75),
-        marginBottom: _vm._px2rem(_vm.tabStyles.iconFontMarginBottom ? _vm.tabStyles.iconFontMarginBottom + 'px' : '8px', 75),
+        fontSize: _vm._px2rem(_vm._px2rem(_vm.tabStyles.iconFontSize + 'px', 75), 75),
+        marginBottom: _vm._px2rem(_vm._px2rem(_vm.tabStyles.iconFontMarginBottom ? _vm.tabStyles.iconFontMarginBottom + 'px' : '8px', 75), 75),
         color: _vm.currentPage == index ? _vm.tabStyles.activeIconFontColor : _vm.tabStyles.iconFontColor
       }),
       attrs: {
@@ -38291,11 +38290,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }, [_vm._v(_vm._s(v.codePoint))]) : _vm._e(), _vm._v(" "), (!_vm.titleUseSlot) ? _c('p', {
       staticClass: "tab-text weex-el weex-text",
       style: ({
-        fontSize: _vm._px2rem(_vm.tabStyles.fontSize + 'px', 75),
+        fontSize: _vm._px2rem(_vm._px2rem(_vm.tabStyles.fontSize + 'px', 75), 75),
         fontWeight: _vm.currentPage == index && _vm.tabStyles.isActiveTitleBold ? 'bold' : 'normal',
         color: _vm.currentPage == index ? _vm.tabStyles.activeTitleColor : _vm.tabStyles.titleColor,
-        paddingLeft: _vm._px2rem(_vm.tabStyles.textPaddingLeft + 'px', 75),
-        paddingRight: _vm._px2rem(_vm.tabStyles.textPaddingRight + 'px', 75)
+        paddingLeft: _vm._px2rem(_vm._px2rem(_vm.tabStyles.textPaddingLeft + 'px', 75), 75),
+        paddingRight: _vm._px2rem(_vm._px2rem(_vm.tabStyles.textPaddingRight + 'px', 75), 75)
       }),
       attrs: {
         "weex-type": "text"
@@ -38691,6 +38690,9 @@ if (false) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var stream = weex.requireModule('stream');
+
 exports.default = {
   tabTitles: [{
     title: '关注'
@@ -38754,6 +38756,26 @@ exports.default = {
     iconFontMarginBottom: 8,
     activeIconFontColor: 'red',
     iconFontUrl: '//at.alicdn.com/t/font_501019_mauqv15evc1pp66r.ttf'
+  },
+  //网络请求
+  wxReloadData: function wxReloadData(url, params, callback) {
+    return stream.fetch({
+      method: 'POST',
+      url: url,
+      type: 'json',
+      body: this.toParams(params)
+    }, callback);
+  },
+
+  //拼接地址
+  toParams: function toParams(obj) {
+    var param = "";
+    for (var name in obj) {
+      if (typeof obj[name] != 'function') {
+        param += "&" + name + "=" + encodeURI(obj[name]);
+      }
+    }
+    return param.substring(1);
   }
 };
 

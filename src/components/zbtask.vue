@@ -128,9 +128,9 @@
 <script>
   const dom = weex.requireModule('dom');
   import { WxcTabPage, WxcPanItem, Utils, BindEnv } from 'weex-ui';
-  import Config from './config'
+  import Config from './config';
 	var stream = weex.requireModule('stream');
-	var POST_URL = 'http://192.168.50.251:18181/mobile/releaseConsultation/selectConsultationListByColumn?columnId=2&consultationType=1';
+	var POST_URL = 'http://192.168.50.251:18181/mobile/releaseConsultation/selectConsultationListByColumn';
 
   export default {
     components: { WxcTabPage, WxcPanItem },
@@ -141,10 +141,10 @@
       demoList: [9,2,3,4],
       tabPageHeight: 1334
     }),
-    created () {
+    created :function() {
       this.tabPageHeight = Utils.env.getPageHeight();
       this.tabList = [...Array(this.tabTitles.length).keys()].map(i => []);
-      this.reloadData(POST_URL,res=>{
+      Config.wxReloadData(POST_URL,{"columnId":"2","consultationType":"1"},res=>{
       this.demoList = res.data.data;
       Vue.set(this.tabList, 0, res.data.data);
 			})
@@ -172,7 +172,7 @@
          weex.requireModule("showLoading").pushCustModuleVC({"VC":"8"})
       },
       //网络请求
-      	//加载数据
+      //加载数据
 			reloadData(url, callback) {
 				return stream.fetch({
 					method: 'POST',

@@ -1830,7 +1830,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 var dom = weex.requireModule('dom');
 
 var stream = weex.requireModule('stream');
-var POST_URL = 'http://192.168.50.251:18181/mobile/releaseConsultation/selectConsultationListByColumn?columnId=2&consultationType=1';
+var POST_URL = 'http://192.168.50.251:18181/mobile/releaseConsultation/selectConsultationListByColumn';
 
 exports.default = {
   components: { WxcTabPage: _weexUi.WxcTabPage, WxcPanItem: _weexUi.WxcPanItem },
@@ -1850,13 +1850,12 @@ exports.default = {
     this.tabList = [].concat(_toConsumableArray(Array(this.tabTitles.length).keys())).map(function (i) {
       return [];
     });
-    this.reloadData(POST_URL, function (res) {
+    _config2.default.wxReloadData(POST_URL, { "columnId": "2", "consultationType": "1" }, function (res) {
       _this.demoList = res.data.data;
       Vue.set(_this.tabList, 0, res.data.data);
     });
     Vue.set(this.tabList, 0, this.demoList);
   },
-
   methods: {
     wxcTabPageCurrentTabSelected: function wxcTabPageCurrentTabSelected(e) {
       var self = this;
@@ -17935,6 +17934,9 @@ module.exports.render._withStripped = true
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var stream = weex.requireModule('stream');
+
 exports.default = {
   tabTitles: [{
     title: '关注'
@@ -17998,6 +18000,26 @@ exports.default = {
     iconFontMarginBottom: 8,
     activeIconFontColor: 'red',
     iconFontUrl: '//at.alicdn.com/t/font_501019_mauqv15evc1pp66r.ttf'
+  },
+  //网络请求
+  wxReloadData: function wxReloadData(url, params, callback) {
+    return stream.fetch({
+      method: 'POST',
+      url: url,
+      type: 'json',
+      body: this.toParams(params)
+    }, callback);
+  },
+
+  //拼接地址
+  toParams: function toParams(obj) {
+    var param = "";
+    for (var name in obj) {
+      if (typeof obj[name] != 'function') {
+        param += "&" + name + "=" + encodeURI(obj[name]);
+      }
+    }
+    return param.substring(1);
   }
 };
 

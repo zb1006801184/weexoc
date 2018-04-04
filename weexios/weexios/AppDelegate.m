@@ -12,6 +12,7 @@
 #import "imageHelper.h"
 #import "showLoadingView.h"
 #import "CellDemo.h"
+#import "WXTabBarViewController.h"
 #ifdef DEBUG
 #import <TBWXDevTool/WXDevTool.h>
 
@@ -30,7 +31,8 @@
     self.window.backgroundColor = [UIColor whiteColor];
     WeexMainViewController *mainVC = [[WeexMainViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:mainVC];
-    self.window.rootViewController = nav;
+    WXTabBarViewController *tabbarVC = [[WXTabBarViewController alloc]init];
+    self.window.rootViewController = tabbarVC;
     [self.window makeKeyAndVisible];
 #ifdef DEBUG
     //use weex-devtool to start debug server and paste debug url here

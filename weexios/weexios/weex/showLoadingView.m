@@ -58,6 +58,7 @@ WX_EXPORT_METHOD(@selector(pushCustModuleVC:))
         [[self getCurrentVC].navigationController pushViewController:taskVC animated:YES];
     }else if (selectVC == 8) {
         ZBTaskDetailViewController *taskDetailVC = [[ZBTaskDetailViewController alloc]init];
+        taskDetailVC.hidesBottomBarWhenPushed = YES;
         [[self getCurrentVC].navigationController pushViewController:taskDetailVC animated:YES];
     }
 }
